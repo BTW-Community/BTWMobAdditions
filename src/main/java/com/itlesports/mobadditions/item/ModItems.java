@@ -1,14 +1,14 @@
 package com.itlesports.mobadditions.item;
 
 import btw.BTWMod;
+import com.itlesports.mobadditions.init.MobAdditionsLogger;
 import net.minecraft.src.*;
 
 public class ModItems {
-    /*
+    public static Item rustywolfSpawnEgg;
     public static void registerModItems() {
-        MobAdditions.LOGGER.info("Registering Mod Items for" + MobAdditions.MOD_ID);
-        rustywolfSpawnEgg = (new Item(BTWMod.instance.parseID("rustywolfSpawnEggID"))).setFilterableProperties(2).setUnlocalizedName("rustywolfSpawnEgg").setCreativeTab(CreativeTabs.tabMaterials);
+        MobAdditionsLogger.LOGGER.info("Registering Mod Items for" + MobAdditionsLogger.MOD_ID);
     }
 
- */
+
 }

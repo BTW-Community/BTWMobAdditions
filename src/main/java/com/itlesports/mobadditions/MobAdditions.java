@@ -2,8 +2,6 @@ package com.itlesports.mobadditions;
 
 import btw.AddonHandler;
 import btw.BTWAddon;
-import btw.BTWMod;
-import btw.entity.BTWEntityMapper;
 import com.itlesports.mobadditions.entity.ModEntities;
 import com.itlesports.mobadditions.item.ModItems;
 
@@ -42,7 +40,6 @@ public class MobAdditions extends BTWAddon {
     }
 
     private void registerConfigIDs() {
-        this.propertyValues = propertyValues;
         this.registerProperty("rustywolfEntityID", "700", "***Entity IDs***\n\n");
     }
 

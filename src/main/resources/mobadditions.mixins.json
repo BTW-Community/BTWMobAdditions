@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.mobadditions.mixin",
+  "package": "com.itlesports.mobadditions.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
-    "com.itlesports.mobadditions.mixin.MobAdditionsMixin"
+    "MobAdditionsMixin"
   ],
   "injectors": {
     "defaultRequire": 1
