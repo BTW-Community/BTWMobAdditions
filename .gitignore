@@ -13,6 +13,7 @@ src/btw/**
 
 # IntelliJ
 *.iml
+.idea
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/gradle.xml
@@ -20,3 +21,8 @@ src/btw/**
 .idea/dictionaries
 .idea/libraries
 .idea/jarRepositories.xml
+
+libs
+reobfuscated
+run
+custom_mappings
