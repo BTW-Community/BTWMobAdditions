@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.fabricmc.mobadditions.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "MobAdditionsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

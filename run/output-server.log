@@ -1,0 +1,45 @@
+2024-03-14 22:34:18 [SERVER] [INFO] Starting integrated minecraft server version 1.5.2
+2024-03-14 22:34:18 [SERVER] [INFO] Generating keypair
+2024-03-14 22:34:18 [SERVER] [INFO] Converting map!
+2024-03-14 22:34:18 [SERVER] [INFO] Scanning folders...
+2024-03-14 22:34:18 [SERVER] [INFO] Total conversion count is 0
+2024-03-14 22:34:18 [SERVER] [WARNING] Unable to find spawn biome
+2024-03-14 22:34:20 [SERVER] [INFO] Preparing start region for level 0
+2024-03-14 22:34:21 [SERVER] [INFO] Preparing spawn area: 64%
+2024-03-14 22:34:22 [SERVER] [INFO] ...Add-On Handler Loading Custom Language File With Prefix: BTW...
+2024-03-14 22:34:22 [SERVER] [INFO] ...Add-On Handler Loading Custom Language File With Prefix: Ex...
+2024-03-14 22:34:22 [SERVER] [INFO] ...Add-On Handler Loading Custom Language File With Prefix: Ex...
+2024-03-14 22:34:22 [SERVER] [INFO] ...Add-On Handler Loading Custom Language File With Prefix: BTW...
+2024-03-14 22:34:22 [SERVER] [INFO] Player270[/127.0.0.1:0] logged in with entity id 403 at (-394.5, 46.0, 555.5)
+2024-03-14 22:34:22 [SERVER] [INFO] Saving and pausing game...
+2024-03-14 22:34:22 [SERVER] [INFO] Saving chunks for level 'Testing'/Overworld
+2024-03-14 22:34:23 [SERVER] [INFO] Saving chunks for level 'Testing'/Nether
+2024-03-14 22:34:23 [SERVER] [INFO] Saving chunks for level 'Testing'/The End
+2024-03-14 22:34:41 [SERVER] [INFO] Stopping server
+2024-03-14 22:34:41 [SERVER] [INFO] Saving players
+2024-03-14 22:34:41 [SERVER] [INFO] Saving worlds
+2024-03-14 22:34:41 [SERVER] [INFO] Saving chunks for level 'Testing'/Overworld
+2024-03-14 22:34:41 [SERVER] [INFO] Saving chunks for level 'Testing'/Nether
+2024-03-14 22:34:41 [SERVER] [INFO] Saving chunks for level 'Testing'/The End
+2024-03-14 22:51:41 [SERVER] [INFO] Starting integrated minecraft server version 1.5.2
+2024-03-14 22:51:41 [SERVER] [INFO] Generating keypair
+2024-03-14 22:51:41 [SERVER] [INFO] Preparing start region for level 0
+2024-03-14 22:51:41 [SERVER] [INFO] ...Add-On Handler Loading Custom Language File With Prefix: BTW...
+2024-03-14 22:51:41 [SERVER] [INFO] ...Add-On Handler Loading Custom Language File With Prefix: Ex...
+2024-03-14 22:51:41 [SERVER] [INFO] ...Add-On Handler Loading Custom Language File With Prefix: Ex...
+2024-03-14 22:51:41 [SERVER] [INFO] ...Add-On Handler Loading Custom Language File With Prefix: BTW...
+2024-03-14 22:51:42 [SERVER] [INFO] Player13[/127.0.0.1:0] logged in with entity id 333 at (-387.2841604093888, 69.87865437096487, 549.826083628243)
+2024-03-14 22:51:42 [SERVER] [INFO] Saving and pausing game...
+2024-03-14 22:51:42 [SERVER] [INFO] Saving chunks for level 'Testing'/Overworld
+2024-03-14 22:51:42 [SERVER] [INFO] Saving chunks for level 'Testing'/Nether
+2024-03-14 22:51:42 [SERVER] [INFO] Saving chunks for level 'Testing'/The End
+2024-03-14 22:52:49 [SERVER] [INFO] Saving and pausing game...
+2024-03-14 22:52:49 [SERVER] [INFO] Saving chunks for level 'Testing'/Overworld
+2024-03-14 22:52:49 [SERVER] [INFO] Saving chunks for level 'Testing'/Nether
+2024-03-14 22:52:49 [SERVER] [INFO] Saving chunks for level 'Testing'/The End
+2024-03-14 22:52:50 [SERVER] [INFO] Stopping server
+2024-03-14 22:52:50 [SERVER] [INFO] Saving players
+2024-03-14 22:52:50 [SERVER] [INFO] Saving worlds
+2024-03-14 22:52:50 [SERVER] [INFO] Saving chunks for level 'Testing'/Overworld
+2024-03-14 22:52:50 [SERVER] [INFO] Saving chunks for level 'Testing'/Nether
+2024-03-14 22:52:50 [SERVER] [INFO] Saving chunks for level 'Testing'/The End

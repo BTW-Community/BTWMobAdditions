@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mob_Additions.btw.iml" filepath="$PROJECT_DIR$/.idea/modules/Mob_Additions.btw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mob_Additions.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Mob_Additions.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mob_Additions.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Mob_Additions.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My_Addon.btw.iml" filepath="$PROJECT_DIR$/.idea/modules/My_Addon.btw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My_Addon.main.iml" filepath="$PROJECT_DIR$/.idea/modules/My_Addon.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My_Addon.test.iml" filepath="$PROJECT_DIR$/.idea/modules/My_Addon.test.iml" />
+    </modules>
+  </component>
+</project>

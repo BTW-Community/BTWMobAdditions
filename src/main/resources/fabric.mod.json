@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "mobadditions",
+  "version": "${version}",
+
+  "name": "Mob Additions",
+  "description": "Backporting some new mobs to Better than Wolves!",
+  "authors": [
+    "ITL Supress"
+  ],
+  "contact": {
+    "homepage": "https://itlesports.com/",
+    "sources": "https://github.com/ITLSupress/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "mobadditions/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "init": [
+      "net.fabricmc.mobadditions.MobAdditions"
+    ],
+    "preLaunch": [
+      "net.fabricmc.mobadditions.PreLaunchInitializer"
+    ]
+  },
+  "mixins": [
+    "mobadditions.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
