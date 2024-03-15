@@ -1,7 +1,6 @@
 package com.itlesports.mobadditions.item;
 
 import btw.BTWMod;
-import net.fabricmc.mobadditions.MobAdditions;
 import net.minecraft.src.*;
 
 public class ModItems {

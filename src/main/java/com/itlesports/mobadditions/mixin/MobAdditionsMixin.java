@@ -1,4 +1,4 @@
-package net.fabricmc.mobadditions.mixin;
+package com.itlesports.mobadditions.mixin;
 
 import btw.BTWAddon;
 import org.spongepowered.asm.mixin.Mixin;

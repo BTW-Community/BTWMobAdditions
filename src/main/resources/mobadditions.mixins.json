@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "MobAdditionsMixin"
+    "com.itlesports.mobadditions.mixin.MobAdditionsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

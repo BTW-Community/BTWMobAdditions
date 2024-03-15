@@ -10,7 +10,7 @@
   ],
   "contact": {
     "homepage": "https://itlesports.com/",
-    "sources": "https://github.com/ITLSupress/fabric-example-mod"
+    "sources": "https://github.com/ITLSupress/BTWMobAdditions/"
   },
 
   "license": "CC0-1.0",
@@ -19,10 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "init": [
-      "net.fabricmc.mobadditions.MobAdditions"
+      "com.itlesports.mobadditions.MobAdditions",
+      "com.itlesports.mobadditions.init.MobAdditionsLogger"
     ],
     "preLaunch": [
-      "net.fabricmc.mobadditions.PreLaunchInitializer"
+      "com.itlesports.mobadditions.init.PreLaunchInitializer"
     ]
   },
   "mixins": [

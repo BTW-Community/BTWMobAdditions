@@ -1,4 +1,4 @@
-package net.fabricmc.mobadditions;
+package com.itlesports.mobadditions.init;
 
 import net.fabricmc.api.ClientModInitializer;
 
