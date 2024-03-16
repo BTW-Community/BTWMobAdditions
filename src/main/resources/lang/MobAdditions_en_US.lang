@@ -1,3 +1,11 @@
+# Items
+
+item.glowInkSacItem.name=Glow Ink Sac
+
+item.cookedFoxChopItem.name=Cooked Foxchop
+item.rawFoxChopItem.name=Raw Foxchop
+
+
 # Mobs
 
 entity.ashenwolfEntity.name=Ashen Wolf
@@ -8,3 +16,6 @@ entity.snowywolfEntity.name=Snowy Wolf
 entity.spottedwolfEntity.name=Spotted Wolf
 entity.stripedwolfEntity.name=Striped Wolf
 entity.woodswolfEntity.name=Woods Wolf
+entity.foxEntity.name=Fox
+
+entity.glowsquidEntity.name=Glow Squid

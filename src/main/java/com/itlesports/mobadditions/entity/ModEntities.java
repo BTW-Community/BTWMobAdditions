@@ -1,5 +1,7 @@
 package com.itlesports.mobadditions.entity;
 
+import com.itlesports.mobadditions.entity.mob.FoxEntity;
+import com.itlesports.mobadditions.entity.mob.aquatic.GlowSquidEntity;
 import com.itlesports.mobadditions.entity.mob.wolf.*;
 
 import net.minecraft.src.EntityList;
@@ -14,5 +16,8 @@ public class ModEntities {
         EntityList.addMapping(SpottedWolfEntity.class,"spottedwolfEntity", 705,0,0);
         EntityList.addMapping(StripedWolfEntity.class,"stripedwolfEntity", 706,0,0);
         EntityList.addMapping(WoodsWolfEntity.class,"woodswolfEntity", 707,0,0);
+        EntityList.addMapping(FoxEntity.class,"foxEntity", 709,0,0);
+
+        EntityList.addMapping(GlowSquidEntity.class,"glowsquidEntity", 708,0x164f4e, 0x4ddaba);
     }
 }

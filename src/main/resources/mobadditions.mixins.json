@@ -4,6 +4,7 @@
   "package": "com.itlesports.mobadditions.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "GlowLightingPlayerMixin"
   ],
   "client": [
     "MobAdditionsMixin"
