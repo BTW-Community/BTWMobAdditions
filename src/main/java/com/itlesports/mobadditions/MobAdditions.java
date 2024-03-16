@@ -2,11 +2,6 @@ package com.itlesports.mobadditions;
 
 import btw.AddonHandler;
 import btw.BTWAddon;
-import com.itlesports.mobadditions.entity.ModEntities;
-import com.itlesports.mobadditions.entity.mob.wolf.RustyWolfEntity;
-import com.itlesports.mobadditions.item.ModItems;
-import net.minecraft.src.EntityEggInfo;
-import net.minecraft.src.EntityList;
 
 import java.util.Map;
 
@@ -14,7 +9,7 @@ public class MobAdditions extends BTWAddon {
     private static MobAdditions instance = new MobAdditions();
     private Map<String, String> propertyValues;
     private MobAdditions() {
-        super("Mob Additions", "0.0.2", "MobAdditions");
+        super("Mob Additions", "0.1.0", "MobAdditions");
     }
     @Override
     public void initialize() {
@@ -29,7 +24,15 @@ public class MobAdditions extends BTWAddon {
         registerConfigIDs();
     }
     private void registerConfigIDs() {
+        this.registerProperty("ashenwolfEntityID", "701", "***Entity IDs***\n\n");
+        this.registerProperty("blackwolfEntityID", "702", "***Entity IDs***\n\n");
+        this.registerProperty("chestnutwolfEntityID", "703", "***Entity IDs***\n\n");
         this.registerProperty("rustywolfEntityID", "700", "***Entity IDs***\n\n");
+        this.registerProperty("snowywolfEntityID", "704", "***Entity IDs***\n\n");
+        this.registerProperty("spottedwolfEntityID", "705", "***Entity IDs***\n\n");
+        this.registerProperty("stripedwolfEntityID", "706", "***Entity IDs***\n\n");
+        this.registerProperty("woodswolfEntityID", "707", "***Entity IDs***\n\n");
+
 
     }
 

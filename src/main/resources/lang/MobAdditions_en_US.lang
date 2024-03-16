@@ -1,3 +1,10 @@
 # Mobs
 
+entity.ashenwolfEntity.name=Ashen Wolf
+entity.blackwolfEntity.name=Black Wolf
+entity.chestnutwolfEntity.name=Chestnut Wolf
 entity.rustywolfEntity.name=Rusty Wolf
+entity.snowywolfEntity.name=Snowy Wolf
+entity.spottedwolfEntity.name=Spotted Wolf
+entity.stripedwolfEntity.name=Striped Wolf
+entity.woodswolfEntity.name=Woods Wolf
