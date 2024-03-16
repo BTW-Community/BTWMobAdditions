@@ -18,7 +18,7 @@ public class RustyWolfEntity extends WolfEntity {
         {
             if ( isStarving() )
             {
-                return "/btwmodtex/fcWolf_tame_starving.png";
+                return "/mobadditions/entity/mob/wolf/rustywolf_starving.png";
             }
 
             return "/mobadditions/entity/wolf/rustywolf_tame.png";
@@ -29,7 +29,7 @@ public class RustyWolfEntity extends WolfEntity {
         }
         else if ( isStarving() || hasAttackTarget())
         {
-            return "/btwmodtex/fcWolf_wild_starving.png";
+            return "/mobadditions/entity/mob/wolf/rustywolf_starving.png";
         }
 
         return texture; // intentionally bypass super method
