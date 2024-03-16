@@ -5,7 +5,6 @@ import com.itlesports.mobadditions.init.MobAdditionsLogger;
 import net.minecraft.src.*;
 
 public class ModItems {
-    public static Item rustywolfSpawnEgg;
     public static void registerModItems() {
         MobAdditionsLogger.LOGGER.info("Registering Mod Items for" + MobAdditionsLogger.MOD_ID);
     }
