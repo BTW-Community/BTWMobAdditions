@@ -8,6 +8,6 @@ import net.minecraft.src.EntityList;
 
 public class ModEntities {
     public static void createModEntityMappings() {
-        EntityList.addMapping(RustyWolfEntity.class, "RustyWolf", MobAdditions.getInstance().parseID("rustywolfEntityID"));
+        EntityList.addMapping(RustyWolfEntity.class,"rustywolfEntity", 0,0,0);
     }
 }

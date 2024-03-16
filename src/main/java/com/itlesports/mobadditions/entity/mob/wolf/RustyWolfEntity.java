@@ -9,10 +9,9 @@ public class RustyWolfEntity extends WolfEntity {
 
     public RustyWolfEntity(World world) {
         super(world);
-        this.texture = "mob/wolf/rustywolf.jpg";
+        this.texture = "/mobadditions/entity/mob/wolf/rustywolf.png";
     }
     @Override
-    @Environment(EnvType.CLIENT)
     public String getTexture()
     {
         if ( isTamed() )
@@ -22,11 +21,11 @@ public class RustyWolfEntity extends WolfEntity {
                 return "/btwmodtex/fcWolf_tame_starving.png";
             }
 
-            return "/mob/wolf/rustywolf_tame.png";
+            return "/mobadditions/entity/wolf/rustywolf_tame.png";
         }
         else if ( isAngry() )
         {
-            return "/mob/wolf/rustywolf_angry.png";
+            return "/mobadditions/entity/mob/wolf/rustywolf_angry.png";
         }
         else if ( isStarving() || hasAttackTarget())
         {

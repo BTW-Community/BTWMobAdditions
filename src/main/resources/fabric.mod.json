@@ -19,7 +19,6 @@
   "environment": "*",
   "entrypoints": {
     "init": [
-      "com.itlesports.mobadditions.MobAdditions",
       "com.itlesports.mobadditions.init.MobAdditionsLogger"
     ],
     "preLaunch": [

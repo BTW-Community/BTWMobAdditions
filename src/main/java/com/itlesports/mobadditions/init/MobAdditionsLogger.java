@@ -1,6 +1,7 @@
 package com.itlesports.mobadditions.init;
 
 import btw.AddonHandler;
+import com.itlesports.mobadditions.entity.ModEntities;
 import net.fabricmc.api.ModInitializer;
 
 import java.util.logging.Logger;
@@ -17,6 +18,7 @@ public class MobAdditionsLogger implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		AddonHandler.logMessage("Mob Additions Initializing...");
+		ModEntities.createModEntityMappings();
 	}
 
 }
