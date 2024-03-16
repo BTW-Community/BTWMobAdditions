@@ -1,6 +1,7 @@
 package com.itlesports.mobadditions.init.lighting;
 
 import btw.item.blockitems.InfiniteBurningTorchBlockItem;
+import com.itlesports.mobadditions.item.glowInkSacItem;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
@@ -115,7 +116,7 @@ public class GlowLighting extends Block {
                 Entity targetEntity = (Entity) o;
 
                 if (targetEntity instanceof EntityPlayer && ((EntityPlayer) targetEntity).getHeldItem() != null) {
-                    return ((EntityPlayer) targetEntity).getHeldItem().getItem() instanceof InfiniteBurningTorchBlockItem;
+                    return ((EntityPlayer) targetEntity).getHeldItem().getItem() instanceof glowInkSacItem;
                 }
             }
         }
