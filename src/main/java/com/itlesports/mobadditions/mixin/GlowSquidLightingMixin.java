@@ -13,6 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(SquidEntity.class)
 public abstract class GlowSquidLightingMixin {
+
     private int dynamicLightUpdateTimer;
     public boolean isglowsquid;
     @Inject(method = "<init>", at = @At("RETURN"))
@@ -27,7 +28,7 @@ public abstract class GlowSquidLightingMixin {
         if (!squidEntity.worldObj.isRemote)
         {
             dynamicLightUpdateTimer++;
-            if (isglowsquid || dynamicLightUpdateTimer > 9)
+            if (isglowsquid || dynamicLightUpdateTimer > 3)
             {
                 int entityID = ModEntities.GlowSquidEntityID;
                 dynamicLightUpdateTimer = 0;
@@ -64,5 +65,7 @@ public abstract class GlowSquidLightingMixin {
 //    	Block.blocksList[itemID].lightValue>0 TODO
         return entityID == ModEntities.GlowSquidEntityID;
     }
+
+
 }
 

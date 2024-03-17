@@ -2,14 +2,11 @@ package com.itlesports.mobadditions.entity.mob.aquatic;
 
 import btw.entity.mob.SquidEntity;
 import btw.item.BTWItems;
-import com.itlesports.mobadditions.init.lighting.GlowSquidLighting;
 import com.itlesports.mobadditions.item.ModItems;
+import com.prupe.mcpatcher.cc.Lightmap;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.src.EnumSkyBlock;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.World;
-import net.minecraft.src.NBTTagCompound;
+import net.minecraft.src.*;
 
 public class GlowSquidEntity extends SquidEntity {
 
@@ -19,31 +16,10 @@ public class GlowSquidEntity extends SquidEntity {
         super(world);
         this.texture = "/mobadditions/entity/mob/aquatic/glowsquid.png";
     }
-    private void addLight() {
-        this.worldObj.setLightValue(EnumSkyBlock.Block, (int) this.posX,
-                (int) this.posY, (int) this.posZ, 15);
-        this.worldObj.markBlockRangeForRenderUpdate((int) this.posX,
-                (int) this.posY, (int) this.posX, 12, 12, 12);
-        this.worldObj.markBlockForUpdate((int) this.posX, (int) this.posY,
-                (int) this.posZ);
-        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
-                (int) this.posY + 1, (int) this.posZ);
-        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
-                (int) this.posY - 1, (int) this.posZ);
-        this.worldObj.updateLightByType(EnumSkyBlock.Block,
-                (int) this.posX + 1, (int) this.posY, (int) this.posZ);
-        this.worldObj.updateLightByType(EnumSkyBlock.Block,
-                (int) this.posX - 1, (int) this.posY, (int) this.posZ);
-        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
-                (int) this.posY, (int) this.posZ + 1);
-        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
-                (int) this.posY, (int) this.posZ - 1);
-    }
 
     public void onLivingUpdate() {
         super.onLivingUpdate();
-        clientLighting();
-        addLight();
+            addClientLight();
         int worldTime = (int) (this.worldObj.worldInfo.getWorldTime() % 24000L);
 
         if (worldTime > 17500 && worldTime < 18500) //
@@ -53,8 +29,10 @@ public class GlowSquidEntity extends SquidEntity {
         if (this.isDead) {
             this.worldObj.updateLightByType(EnumSkyBlock.Block,
                     (int) this.posX, (int) this.posY, (int) this.posZ);
+
         }
     }
+
         public void initCreature() {
             int worldTime = (int)(this.worldObj.worldInfo.getWorldTime() % 24000L);
 
@@ -147,11 +125,28 @@ public class GlowSquidEntity extends SquidEntity {
             }
             return false;
         }
-
     @Environment(EnvType.CLIENT)
-    public void clientLighting() {
-        addLight();
+    private void addClientLight() {
+        this.worldObj.setLightValue(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY, (int) this.posZ, 15);
+        this.worldObj.markBlockRangeForRenderUpdate((int) this.posX,
+                (int) this.posY, (int) this.posX, 12, 12, 12);
+        this.worldObj.markBlockForUpdate((int) this.posX, (int) this.posY,
+                (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY + 1, (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY - 1, (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block,
+                (int) this.posX + 1, (int) this.posY, (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block,
+                (int) this.posX - 1, (int) this.posY, (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY, (int) this.posZ + 1);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY, (int) this.posZ - 1);
     }
+
 
     @Override
     @Environment(EnvType.CLIENT)
@@ -167,6 +162,7 @@ public class GlowSquidEntity extends SquidEntity {
     {
         return 1.0F;
     }
-    }
+
+}
 
 

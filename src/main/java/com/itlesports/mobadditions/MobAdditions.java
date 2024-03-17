@@ -8,6 +8,8 @@ import com.itlesports.mobadditions.entity.mob.aquatic.RenderGlowSquid;
 import com.itlesports.mobadditions.init.lighting.GlowLighting;
 import com.itlesports.mobadditions.init.lighting.GlowSquidLighting;
 import com.itlesports.mobadditions.item.ModItems;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
 
 import java.util.Map;
@@ -26,7 +28,6 @@ public class MobAdditions extends BTWAddon {
     public void initialize() {
         AddonHandler.logMessage(this.getName() + " Version " + this.getVersionString() + " Initializing...");
         AddBiomeSpawn();
-        AddEntityRenderer();
         AddNewBlock();
     }
     @Override
@@ -61,12 +62,7 @@ public class MobAdditions extends BTWAddon {
         //<biome>.getSpawnableList(EnumCreatureType.<type>).add(new SpawnListEntry(<yourEntity>.class, <weight>, <maxNumber>, <minNumber>));
         //BiomeGenBase.hell.getSpawnableList(EnumCreatureType.lavaCreature).add(new SpawnListEntry(SocksMobsEntitySquidLava.class, 100, 4, 4));
     }
-    private void AddEntityRenderer()
-    {
-        RenderManager.addEntityRenderer(GlowSquidEntity.class, new RenderGlowSquid(new SquidModel()));
 
-        AddonHandler.logMessage(this.getName() + " Models Loaded");
-    }
     public static void AddNewBlock()
     {
         lightsourceinvis = (new GlowLighting(id_lightsourceinvis - 256));

@@ -13,7 +13,7 @@ public class GlowSquidLighting extends Block{
     public final static int lightSourceTickRate = 20;
 
     public GlowSquidLighting(int par1) {
-        super(par1, Material.water);
+        super(par1, Material.air);
         setLightValue(0.9375F);
 
         setTickRandomly(true);
@@ -122,4 +122,6 @@ public class GlowSquidLighting extends Block{
 
         return false;
     }
+
+
 }

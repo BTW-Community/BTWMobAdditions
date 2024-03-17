@@ -6,9 +6,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.src.EntityLiving;
 import net.minecraft.src.ModelBase;
 import net.minecraft.src.OpenGlHelper;
-import net.minecraft.src.RenderSquid;
 import org.lwjgl.opengl.GL11;
-@Environment(EnvType.CLIENT)
 public class RenderGlowSquid extends SquidRenderer {
 
     public RenderGlowSquid(ModelBase var1)
@@ -19,7 +17,7 @@ public class RenderGlowSquid extends SquidRenderer {
     protected int shouldRenderPass(EntityLiving var1, int var2, float var3) {
         return this.renderGlow((GlowSquidEntity)var1, var2);
     }
-
+    @Environment(EnvType.CLIENT)
     protected int renderGlow(GlowSquidEntity var1, int var2)
     {
         if (var1.getSquidType() == 0)
