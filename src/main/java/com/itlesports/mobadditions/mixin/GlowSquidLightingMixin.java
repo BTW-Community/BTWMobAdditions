@@ -4,9 +4,7 @@ import btw.entity.mob.SquidEntity;
 import btw.world.util.BlockPos;
 import com.itlesports.mobadditions.MobAdditions;
 import com.itlesports.mobadditions.entity.ModEntities;
-import com.itlesports.mobadditions.entity.mob.aquatic.GlowSquidEntity;
-import com.itlesports.mobadditions.init.lighting.GlowLighting;
-import net.minecraft.src.EntityPlayer;
+import com.itlesports.mobadditions.init.lighting.GlowSquidLighting;
 import net.minecraft.src.MathHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -54,7 +52,7 @@ public abstract class GlowSquidLightingMixin {
                         squidEntity.worldObj.setBlock(lightpos.x, lightpos.y, lightpos.z,
                                 MobAdditions.lightsourcewater.blockID, 0 , 2);
                         squidEntity.worldObj.scheduleBlockUpdate(lightpos.x, lightpos.y, lightpos.z,
-                                MobAdditions.lightsourcewater.blockID, GlowLighting.lightSourceTickRate);
+                                MobAdditions.lightsourcewater.blockID, GlowSquidLighting.lightSourceTickRate);
                     }
                 }
             }
