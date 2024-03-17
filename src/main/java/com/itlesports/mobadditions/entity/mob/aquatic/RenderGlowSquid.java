@@ -1,12 +1,14 @@
 package com.itlesports.mobadditions.entity.mob.aquatic;
 
 import btw.client.render.entity.SquidRenderer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.EntityLiving;
 import net.minecraft.src.ModelBase;
 import net.minecraft.src.OpenGlHelper;
 import net.minecraft.src.RenderSquid;
 import org.lwjgl.opengl.GL11;
-
+@Environment(EnvType.CLIENT)
 public class RenderGlowSquid extends SquidRenderer {
 
     public RenderGlowSquid(ModelBase var1)

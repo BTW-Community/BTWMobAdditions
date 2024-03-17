@@ -4,6 +4,9 @@ import btw.BTWMod;
 import btw.entity.mob.SquidEntity;
 import btw.item.BTWItems;
 import com.itlesports.mobadditions.item.ModItems;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.src.EnumSkyBlock;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.World;
 import net.minecraft.src.NBTTagCompound;
@@ -16,9 +19,9 @@ public class GlowSquidEntity extends SquidEntity {
         this.texture = "/mobadditions/entity/mob/aquatic/glowsquid.png";
     }
 
+
     public void onLivingUpdate() {
         super.onLivingUpdate();
-
         int worldTime = (int) (this.worldObj.worldInfo.getWorldTime() % 24000L);
 
         if (worldTime > 17500 && worldTime < 18500) //
@@ -38,7 +41,7 @@ public class GlowSquidEntity extends SquidEntity {
         public String getTexture()
         {
             if (this.getSquidType() == 1) {
-                return "/mobadditons/entity/aquatic/glowsquid.png";
+                return "/mobadditions/entity/mob/aquatic/glowsquid.png";
             }
             else return super.getTexture();
         }
@@ -118,5 +121,19 @@ public class GlowSquidEntity extends SquidEntity {
             }
             return false;
         }
+    @Override
+    @Environment(EnvType.CLIENT)
+    public int getBrightnessForRender(float par1)
+    {
+        return 15728880;
+    }
+
+    /**
+     * Gets how bright this entity is.
+     */
+    public float getBrightness(float par1)
+    {
+        return 1.0F;
+    }
     }
 

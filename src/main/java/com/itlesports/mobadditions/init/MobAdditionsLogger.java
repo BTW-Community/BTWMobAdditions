@@ -8,6 +8,7 @@ import net.fabricmc.api.ModInitializer;
 import java.util.logging.Logger;
 
 public class MobAdditionsLogger implements ModInitializer {
+
 	// This logger can be used to write text to the console and the log file.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final String MOD_ID = "mobadditions";

@@ -7,6 +7,7 @@ import com.itlesports.mobadditions.entity.mob.wolf.*;
 import net.minecraft.src.EntityList;
 
 public class ModEntities {
+    public static int GlowSquidEntityID = 708;
     public static void createModEntityMappings() {
         EntityList.addMapping(AshenWolfEntity.class,"ashenwolfEntity", 701,0,0);
         EntityList.addMapping(BlackWolfEntity.class,"blackwolfEntity", 702,0,0);
@@ -18,6 +19,6 @@ public class ModEntities {
         EntityList.addMapping(WoodsWolfEntity.class,"woodswolfEntity", 707,0,0);
         EntityList.addMapping(FoxEntity.class,"foxEntity", 709,0,0);
 
-        EntityList.addMapping(GlowSquidEntity.class,"glowsquidEntity", 708,0x164f4e, 0x4ddaba);
+        EntityList.addMapping(GlowSquidEntity.class,"glowsquidEntity", GlowSquidEntityID,0x164f4e, 0x4ddaba);
     }
 }

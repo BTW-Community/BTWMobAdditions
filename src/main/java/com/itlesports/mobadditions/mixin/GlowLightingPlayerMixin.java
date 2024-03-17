@@ -62,5 +62,4 @@ public abstract class GlowLightingPlayerMixin {
 //    	Block.blocksList[itemID].lightValue>0 TODO
         return itemID == ModItems.glowInkSac.itemID;
     }
-
 }

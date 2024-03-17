@@ -1,6 +1,6 @@
 package com.itlesports.mobadditions.init.lighting;
 
-import com.itlesports.mobadditions.item.glowInkSacItem;
+import com.itlesports.mobadditions.entity.mob.aquatic.GlowSquidEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
@@ -8,13 +8,12 @@ import net.minecraft.src.*;
 import java.util.List;
 import java.util.Random;
 
+public class GlowSquidLighting extends Block{
 
-public class GlowLighting extends Block {
+    public final static int lightSourceTickRate = 5;
 
-    public final static int lightSourceTickRate = 10;
-
-    public GlowLighting(int par1) {
-        super(par1, Material.air);
+    public GlowSquidLighting(int par1) {
+        super(par1, Material.water);
         setLightValue(0.9375F);
 
         setTickRandomly(true);
@@ -63,7 +62,7 @@ public class GlowLighting extends Block {
 
     @Override
     public boolean isAirBlock() {
-        return true;
+        return false;
     }
 
     @Override
@@ -73,7 +72,7 @@ public class GlowLighting extends Block {
 
     @Override
     public void updateTick(World world, int i, int j, int k, Random random) {
-        boolean canStay = isPlayerInBoundsWithGlowInkSac(world, i, j, k);
+        boolean canStay = isGlowSquidNear(world, i, j, k);
 
         if (!canStay) {
             world.setBlock(i, j, k, 0, 0, 2);
@@ -105,7 +104,7 @@ public class GlowLighting extends Block {
     }
 
 
-    private boolean isPlayerInBoundsWithGlowInkSac(World world, int i, int j, int k) {
+    private boolean isGlowSquidNear(World world, int i, int j, int k) {
         List list = world.getEntitiesWithinAABB(Entity.class,
                 AxisAlignedBB.getAABBPool().getAABB((double) i, (double) j - 0.1, (double) k,
                         (double) (i + 1), (double) (j + 1), (double) (k + 1)));
@@ -115,8 +114,8 @@ public class GlowLighting extends Block {
             for (Object o : list) {
                 Entity targetEntity = (Entity) o;
 
-                if (targetEntity instanceof EntityPlayer && ((EntityPlayer) targetEntity).getHeldItem() != null) {
-                    return ((EntityPlayer) targetEntity).getHeldItem().getItem() instanceof glowInkSacItem;
+                if (targetEntity instanceof GlowSquidEntity && ((GlowSquidEntity) targetEntity).DoesGlow() != false) {
+                    return ((GlowSquidEntity) targetEntity).DoesGlow() == true;
                 }
             }
         }

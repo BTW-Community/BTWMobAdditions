@@ -6,6 +6,7 @@ import btw.entity.model.SquidModel;
 import com.itlesports.mobadditions.entity.mob.aquatic.GlowSquidEntity;
 import com.itlesports.mobadditions.entity.mob.aquatic.RenderGlowSquid;
 import com.itlesports.mobadditions.init.lighting.GlowLighting;
+import com.itlesports.mobadditions.init.lighting.GlowSquidLighting;
 import com.itlesports.mobadditions.item.ModItems;
 import net.minecraft.src.*;
 
@@ -14,6 +15,8 @@ import java.util.Map;
 public class MobAdditions extends BTWAddon {
     public static int id_lightsourceinvis = 2042;
     public static Block lightsourceinvis;
+    public static int id_lightsourcewater = 2043;
+    public static Block lightsourcewater;
     private static MobAdditions instance = new MobAdditions();
     private Map<String, String> propertyValues;
     private MobAdditions() {
@@ -67,6 +70,7 @@ public class MobAdditions extends BTWAddon {
     public static void AddNewBlock()
     {
         lightsourceinvis = (new GlowLighting(id_lightsourceinvis - 256));
+        lightsourcewater = (new GlowSquidLighting(id_lightsourcewater - 1787));
     }
 
 
