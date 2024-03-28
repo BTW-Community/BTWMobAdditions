@@ -27,8 +27,10 @@ public class MobAdditionsLogger implements ModInitializer {
 		AddonHandler.logMessage("Mob Additions Items Initialized!");
 		AddonHandler.logMessage("Mob Additions Initializing Entites...");
 		ModEntities.createModEntityMappings();
-		ModRenderMapper.createModEntityRenderers();
 		AddonHandler.logMessage("Mob Additions Entities Initialized!");
+		AddonHandler.logMessage("Mob Additions Initializing Entity Renderers...!");
+		ModRenderMapper.createModEntityRenderers();
+		AddonHandler.logMessage("Mob Additions Entity Renderers Initialized!");
 	}
 
 }
