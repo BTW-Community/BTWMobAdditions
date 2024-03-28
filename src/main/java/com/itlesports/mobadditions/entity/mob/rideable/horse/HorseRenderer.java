@@ -91,7 +91,7 @@ public class HorseRenderer extends RenderLiving
 
     private ResourceLocation func_110848_b(HorseEntity par1HorseEntity)
     {
-        String var2 = par1HorseEntity.getHorseTexture();
+        String var2 = par1HorseEntity.getTexture();
         ResourceLocation var3 = (ResourceLocation)field_110852_a.get(var2);
 
         if (var3 == null)

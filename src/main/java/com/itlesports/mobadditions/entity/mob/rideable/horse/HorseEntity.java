@@ -6,6 +6,8 @@ import com.itlesports.mobadditions.entity.EntityLivingBase;
 import com.itlesports.mobadditions.entity.EntityLivingData;
 import com.itlesports.mobadditions.entity.mob.attributes.*;
 import com.itlesports.mobadditions.item.ModItems;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
 import btw.item.BTWItems;
 
@@ -54,25 +56,26 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
     {
         super(par1World);
         this.texture = "/mobadditions/entity/mob/horse/horse_brown.png";
-        this.moveSpeed = 0.2F;
         this.setSize(1.4F, 1.6F);
         this.isImmuneToFire = false;
         this.setChested(false);
         this.getNavigator().setAvoidsWater(true);
 
         tasks.addTask(0, new EntityAISwimming(this));
-        tasks.addTask(1, new AnimalFleeBehavior(this, 1.9F));
+        tasks.addTask(1, new AnimalFleeBehavior(this, 0.25F));
         tasks.addTask(1, new EntityAIAvoidEntity(this, EntityZombie.class, 8.0F, 0.6F, 0.7F));
         tasks.addTask(2, new EntityAIMate(this, 1.0F));
-        tasks.addTask(3, new MultiTemptBehavior(this, 1.25F));
+        tasks.addTask(3, new MultiTemptBehavior(this, 0.2F));
         tasks.addTask(4, new GrazeBehavior(this));
-        tasks.addTask(5, new MoveToLooseFoodBehavior(this, 1.0F));
-        tasks.addTask(6, new MoveToGrazeBehavior(this, 1.0F));
-        tasks.addTask(7, new EntityAIFollowParent(this, 1.25F));
-        tasks.addTask(8, new SimpleWanderBehavior(this, 1.25F));
+        tasks.addTask(5, new MoveToLooseFoodBehavior(this, 0.15F));
+        tasks.addTask(6, new MoveToGrazeBehavior(this, 0.15F));
+        tasks.addTask(7, new EntityAIFollowParent(this, 0.2F));
+        tasks.addTask(8, new SimpleWanderBehavior(this, 0.2F));
         tasks.addTask(9, new EntityAIWatchClosest(this, EntityPlayer.class, 6F));
         tasks.addTask(10, new EntityAILookIdle(this));
 
+        this.landMovementFactor = 0.1F;
+        this.moveSpeed = 0.1F;
         this.func_110226_cD();
     }
 
@@ -619,7 +622,7 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
         super.applyEntityAttributes();
         this.getAttributeMap().func_111150_b(horseJumpStrength);
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(10.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.22499999403953552D);
+        //this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.17499999403953552D);
     }
 
     /**
@@ -691,7 +694,9 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
         this.field_110286_bQ = this.field_110286_bQ + field_110273_bx[var3];
     }
 
-    public String getHorseTexture()
+    @Override
+    @Environment(EnvType.CLIENT)
+    public String getTexture()
     {
         if (this.field_110286_bQ == null)
         {
@@ -1265,7 +1270,7 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
 
             if (!this.worldObj.isRemote)
             {
-                this.setAIMoveSpeed((float)this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue());
+                //this.setAIMoveSpeed((float)this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue());
                 super.moveEntityWithHeading(par1, par2);
             }
 
@@ -1363,12 +1368,12 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
             this.setOwnerName(par1NBTTagCompound.getString("OwnerName"));
         }
 
-        AttributeInstance var2 = this.getAttributeMap().getAttributeInstanceByName("Speed");
+        //AttributeInstance var2 = this.getAttributeMap().getAttributeInstanceByName("Speed");
 
-        if (var2 != null)
-        {
-            this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(var2.getBaseValue() * 0.25D);
-        }
+        //if (var2 != null)
+        //{
+            //this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(var2.getBaseValue() * 0.15D);
+        //}
 
         if (this.isChested())
         {
@@ -1500,16 +1505,21 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
         }
 
         var3.setHorseType(var6);
-        /*
-        double var14 = this.getEntityAttribute(SharedMonsterAttributes.maxHealth).getBaseValue() + par1EntityAgeable.getEntityAttribute(SharedMonsterAttributes.maxHealth).getBaseValue() + (double)this.func_110267_cL();
+
+        double var14 = this.getEntityAttribute(SharedMonsterAttributes.maxHealth).getBaseValue() + this.getEntityAttribute(SharedMonsterAttributes.maxHealth).getBaseValue() + (double)this.func_110267_cL();
         var3.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(var14 / 3.0D);
-        double var13 = this.getEntityAttribute(horseJumpStrength).getBaseValue() + par1EntityAgeable.getEntityAttribute(horseJumpStrength).getBaseValue() + this.func_110245_cM();
+        double var13 = this.getEntityAttribute(horseJumpStrength).getBaseValue() + this.getEntityAttribute(horseJumpStrength).getBaseValue() + this.func_110245_cM();
         var3.getEntityAttribute(horseJumpStrength).setAttribute(var13 / 3.0D);
-        double var11 = this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getBaseValue() + par1EntityAgeable.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getBaseValue() + this.func_110203_cN();
-        var3.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(var11 / 3.0D);
-         */
+        //double var11 = this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getBaseValue() + this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getBaseValue() + this.func_110203_cN();
+        //var3.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(var11 / 0.15D);
+
         return var3;
     }
+    public AttributeInstance getEntityAttribute(Attribute par1Attribute)
+    {
+        return this.getAttributeMap().getAttributeInstance(par1Attribute);
+    }
+
 
     public EntityLivingData onSpawnWithEgg(EntityLivingData par1EntityLivingData)
     {
@@ -1548,24 +1558,24 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
             this.setGrowingAge(-24000);
         }
 
-        /*
+
         if (var7 != 4 && var7 != 3)
         {
             this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute((double)this.func_110267_cL());
 
             if (var7 == 0)
             {
-                this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(this.func_110203_cN());
+                //this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(this.func_110203_cN());
             }
             else
             {
-                this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.17499999701976776D);
+                //this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.17499999701976776D);
             }
         }
         else
         {
             this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(15.0D);
-            this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.20000000298023224D);
+            //this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.15000000298023224D);
         }
 
         if (var7 != 2 && var7 != 1)
@@ -1576,7 +1586,7 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
         {
             this.getEntityAttribute(horseJumpStrength).setAttribute(0.5D);
         }
-         */
+
 
         return (EntityLivingData)par1EntityLivingData1;
     }
