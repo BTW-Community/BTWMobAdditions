@@ -1,7 +1,7 @@
 package com.itlesports.mobadditions.init;
 
-import btw.AddonHandler;
 import btw.entity.model.SquidModel;;
+import com.itlesports.mobadditions.entity.ModRenderMapper;
 import com.itlesports.mobadditions.entity.mob.aquatic.GlowSquidEntity;
 import com.itlesports.mobadditions.entity.mob.aquatic.RenderGlowSquid;
 import net.fabricmc.api.ClientModInitializer;

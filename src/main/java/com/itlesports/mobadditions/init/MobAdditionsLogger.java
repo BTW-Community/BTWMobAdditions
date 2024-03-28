@@ -3,6 +3,7 @@ package com.itlesports.mobadditions.init;
 import btw.AddonHandler;
 import com.itlesports.mobadditions.MobAdditions;
 import com.itlesports.mobadditions.entity.ModEntities;
+import com.itlesports.mobadditions.entity.ModRenderMapper;
 import com.itlesports.mobadditions.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -26,6 +27,7 @@ public class MobAdditionsLogger implements ModInitializer {
 		AddonHandler.logMessage("Mob Additions Items Initialized!");
 		AddonHandler.logMessage("Mob Additions Initializing Entites...");
 		ModEntities.createModEntityMappings();
+		ModRenderMapper.createModEntityRenderers();
 		AddonHandler.logMessage("Mob Additions Entities Initialized!");
 	}
 
