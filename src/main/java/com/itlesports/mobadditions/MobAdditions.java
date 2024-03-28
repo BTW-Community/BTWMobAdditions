@@ -5,6 +5,7 @@ import btw.BTWAddon;
 import btw.entity.model.SquidModel;
 import com.itlesports.mobadditions.entity.mob.aquatic.GlowSquidEntity;
 import com.itlesports.mobadditions.entity.mob.aquatic.RenderGlowSquid;
+import com.itlesports.mobadditions.entity.mob.wolf.*;
 import com.itlesports.mobadditions.init.lighting.GlowLighting;
 import com.itlesports.mobadditions.init.lighting.GlowSquidLighting;
 import com.itlesports.mobadditions.item.ModItems;
@@ -59,6 +60,31 @@ public class MobAdditions extends BTWAddon {
     {
         BiomeGenBase.ocean.getSpawnableList(EnumCreatureType.waterCreature).add(new SpawnListEntry(GlowSquidEntity.class, 40, 4, 4));
         BiomeGenBase.river.getSpawnableList(EnumCreatureType.waterCreature).add(new SpawnListEntry(GlowSquidEntity.class, 40, 4, 4));
+        BiomeGenBase.taiga.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(AshenWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.taigaHills.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(AshenWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.extremeHills.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(BlackWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.extremeHillsEdge.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(BlackWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.mushroomIsland.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(ChestnutWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.mushroomIslandShore.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(ChestnutWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.jungle.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(RustyWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.jungleHills.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(RustyWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.icePlains.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(SnowyWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.iceMountains.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(SnowyWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.swampland.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(SpottedWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.desert.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(StripedWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.desertHills.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(StripedWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.forest.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(WoodsWolfEntity.class, 20, 4, 4));
+        BiomeGenBase.forestHills.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(WoodsWolfEntity.class, 20, 4, 4));
+
+
+
+
+
+
+
+
+
+
         //<biome>.getSpawnableList(EnumCreatureType.<type>).add(new SpawnListEntry(<yourEntity>.class, <weight>, <maxNumber>, <minNumber>));
         //BiomeGenBase.hell.getSpawnableList(EnumCreatureType.lavaCreature).add(new SpawnListEntry(SocksMobsEntitySquidLava.class, 100, 4, 4));
     }
