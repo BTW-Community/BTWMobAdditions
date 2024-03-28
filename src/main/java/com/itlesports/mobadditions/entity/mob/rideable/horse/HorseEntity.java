@@ -18,13 +18,13 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
     private boolean objectChanged;
     private static final IEntitySelector horseBreedingSelector = new EntityHorseBredSelector();
     private static final Attribute horseJumpStrength = (new RangedAttribute("horse.jumpStrength", 0.7D, 0.0D, 2.0D)).func_111117_a("Jump Strength").setShouldWatch(true);
-    private static final String[] horseArmorTextures = new String[] {null, "mobadditions/entity/mob/horse/armor/horse_armor_iron.png", "mobadditions/entity/mob/horse/armor/horse_armor_gold.png", "mobadditions/entity/mob/horse/armor/horse_armor_diamond.png"};
+    private static final String[] horseArmorTextures = new String[] {null, "/mobadditions/entity/mob/horse/armor/horse_armor_iron.png", "/mobadditions/entity/mob/horse/armor/horse_armor_gold.png", "/mobadditions/entity/mob/horse/armor/horse_armor_diamond.png"};
     private static final String[] field_110273_bx = new String[] {"", "meo", "goo", "dio"};
     private static final int[] armorValues = new int[] {0, 5, 7, 11};
-    private static final String[] horseTextures = new String[] {"mobadditions/entity/mob/horse/horse_white.png", "mobadditions/entity/mob/horse/horse_creamy.png", "mobadditions/entity/mob/horse/horse_chestnut.png", "mobadditions/entity/mob/horse/horse_brown.png", "mobadditions/entity/mob/horse/horse_black.png", "mobadditions/entity/mob/horse/horse_gray.png", "mobadditions/entity/mob/horse/horse_darkbrown.png"};
-    private static final String[] field_110269_bA = new String[] {"hwh", "hcr", "hch", "hbr", "hbl", "hgr", "hdb"};
-    private static final String[] horseMarkingTextures = new String[] {null, "mobadditions/entity/mob/horse/horse_markings_white.png", "mobadditions/entity/mob/horse/horse_markings_whitefield.png", "textures/entity/horse/horse_markings_whitedots.png", "textures/entity/horse/horse_markings_blackdots.png"};
-    private static final String[] field_110292_bC = new String[] {"", "wo_", "wmo", "wdo", "bdo"};
+    private static final String[] horseTextures = new String[] {"/mobadditions/entity/mob/horse/horse_white.png", "/mobadditions/entity/mob/horse/horse_creamy.png", "/mobadditions/entity/mob/horse/horse_chestnut.png", "/mobadditions/entity/mob/horse/horse_brown.png", "/mobadditions/entity/mob/horse/horse_black.png", "/mobadditions/entity/mob/horse/horse_gray.png", "/mobadditions/entity/mob/horse/horse_darkbrown.png"};
+    private static final String[] field_110269_bA = new String[] {"horse_white.png", "horse_creamy.png", "horse_chestnut.png", "horse_brown.png", "horse_black.png", "horse_gray.png", "horse_darkbrown.png"};
+    private static final String[] horseMarkingTextures = new String[] {null, "/mobadditions/entity/mob/horse/horse_markings_white.png", "/mobadditions/entity/mob/horse/horse_markings_whitefield.png", "/mobadditions/entity/mob/horse/horse_markings_whitedots.png", "/mobadditions/entity/mob/horse/horse_markings_blackdots.png"};
+    private static final String[] field_110292_bC = new String[] {"", "horse_markings_white.png", "horse_markings_whitefield.png", "horse_markings_whitedots.png", "horse_markings_blackdots.png"};
     private int eatingHaystackCounter;
     private int openMouthCounter;
     private int jumpRearingCounter;
@@ -663,7 +663,7 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
 
     private void setHorseTexturePaths()
     {
-        this.field_110286_bQ = "horse/";
+        this.field_110286_bQ = "/mobadditions/entity/mob/horse/";
         this.field_110280_bR[0] = null;
         this.field_110280_bR[1] = null;
         this.field_110280_bR[2] = null;

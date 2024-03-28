@@ -1,7 +1,6 @@
 package com.itlesports.mobadditions.init;
 
 import btw.AddonHandler;
-import com.itlesports.mobadditions.MobAdditions;
 import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.entity.ModEntities;
 import com.itlesports.mobadditions.entity.ModRenderMapper;

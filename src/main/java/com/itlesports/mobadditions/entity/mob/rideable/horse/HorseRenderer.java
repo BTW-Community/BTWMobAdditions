@@ -7,11 +7,11 @@ import net.minecraft.src.*;
 public class HorseRenderer extends RenderLiving
 {
     private static final Map field_110852_a = Maps.newHashMap();
-    private static final ResourceLocation whiteHorseTextures = new ResourceLocation("mobadditions/entity/mob/horse/horse_white.png");
-    private static final ResourceLocation muleTextures = new ResourceLocation("mobadditions/entity/mob/horse/mule.png");
-    private static final ResourceLocation donkeyTextures = new ResourceLocation("mobadditions/entity/mob/horse/donkey.png");
-    private static final ResourceLocation zombieHorseTextures = new ResourceLocation("mobadditions/entity/mob/horse/horse_zombie.png");
-    private static final ResourceLocation skeletonHorseTextures = new ResourceLocation("mobadditions/entity/mob/horse/horse_skeleton.png");
+    private static final ResourceLocation whiteHorseTextures = new ResourceLocation("/mobadditions/entity/mob/horse/horse_white.png");
+    private static final ResourceLocation muleTextures = new ResourceLocation("/mobadditions/entity/mob/horse/mule.png");
+    private static final ResourceLocation donkeyTextures = new ResourceLocation("/mobadditions/entity/mob/horse/donkey.png");
+    private static final ResourceLocation zombieHorseTextures = new ResourceLocation("/mobadditions/entity/mob/horse/horse_zombie.png");
+    private static final ResourceLocation skeletonHorseTextures = new ResourceLocation("/mobadditions/entity/mob/horse/horse_skeleton.png");
 
     public HorseRenderer(ModelBase par1ModelBase, HorseModel horseModel, float par2)
     {
@@ -53,6 +53,7 @@ public class HorseRenderer extends RenderLiving
         //this.renderManager.renderEngine.bindTexture(par1ResourceLocation);
         this.renderManager.renderEngine.bindTexture(String.valueOf(par1ResourceLocation));
     }
+
     protected void bindEntityTexture(Entity par1Entity)
     {
         this.bindTexture(this.getEntityTexture(par1Entity));

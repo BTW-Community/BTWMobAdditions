@@ -3,12 +3,9 @@ package com.itlesports.mobadditions.entity.mob.aquatic.squid;
 import btw.entity.mob.SquidEntity;
 import btw.item.BTWItems;
 import com.itlesports.mobadditions.item.ModItems;
-import com.prupe.mcpatcher.cc.Lightmap;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
-
-import static com.prupe.mcpatcher.mal.block.BlockAPI.getBlockLightValue;
 
 public class GlowSquidEntity extends SquidEntity {
 

@@ -2,12 +2,12 @@ package com.itlesports.mobadditions.entity.mob.rideable.horse;
 
 public class ResourceLocation implements Comparable<ResourceLocation>
 {
-    private final String resourceDomain;
+    //private final String resourceDomain;
     private final String resourcePath;
 
     public ResourceLocation(String par1Str, String par2Str)
     {
-
+/*
         if (par1Str != null && par1Str.length() != 0)
         {
             this.resourceDomain = par1Str;
@@ -17,13 +17,15 @@ public class ResourceLocation implements Comparable<ResourceLocation>
             this.resourceDomain = "minecraft";
         }
 
+ */
+
         this.resourcePath = par2Str;
     }
 
     public ResourceLocation(String par1Str)
     {
         //par1Str = par1Str.charAt(0) == '/' ? par1Str.substring(1) : par1Str;
-        String var2 = "minecraft";
+        //String var2 = "minecraft";
         String var3 = par1Str;
         int var4 = par1Str.indexOf(58);
 
@@ -33,11 +35,11 @@ public class ResourceLocation implements Comparable<ResourceLocation>
 
             if (var4 > 1)
             {
-                var2 = par1Str.substring(0, var4);
+                //var2 = par1Str.substring(0, var4);
             }
         }
 
-        this.resourceDomain = var2.toLowerCase();
+        //this.resourceDomain = var2.toLowerCase();
         this.resourcePath = var3;
     }
 
@@ -46,14 +48,14 @@ public class ResourceLocation implements Comparable<ResourceLocation>
         return this.resourcePath;
     }
 
-    public String getResourceDomain()
+    //public String getResourceDomain()
     {
-        return this.resourceDomain;
+        //return this.resourceDomain;
     }
 
     public String toString()
     {
-        return this.resourceDomain + ":" + this.resourcePath;
+        return this.resourcePath;
     }
 
     public boolean equals(Object par1Obj)
@@ -69,19 +71,21 @@ public class ResourceLocation implements Comparable<ResourceLocation>
         else
         {
             ResourceLocation var2 = (ResourceLocation)par1Obj;
-            return this.resourceDomain.equals(var2.resourceDomain) && this.resourcePath.equals(var2.resourcePath);
+            return this.resourcePath.equals(var2.resourcePath);
         }
     }
 
     public int hashCode()
     {
-        return 31 * this.resourceDomain.hashCode() + this.resourcePath.hashCode();
+        return 31 * this.resourcePath.hashCode();
     }
 
     @Override
     public int compareTo(ResourceLocation that) {
         int i = this.resourcePath.compareTo(that.resourcePath);
         if (i != 0) return i;
-        return this.resourceDomain.compareTo(that.resourceDomain);
+        return this.resourcePath.compareTo(that.resourcePath);
     }
+
+
 }
