@@ -8,6 +8,8 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
 
+import static com.prupe.mcpatcher.mal.block.BlockAPI.getBlockLightValue;
+
 public class GlowSquidEntity extends SquidEntity {
 
 
@@ -19,7 +21,7 @@ public class GlowSquidEntity extends SquidEntity {
 
     public void onLivingUpdate() {
         super.onLivingUpdate();
-            addClientLight();
+        addClientLight();
         int worldTime = (int) (this.worldObj.worldInfo.getWorldTime() % 24000L);
 
         if (worldTime > 17500 && worldTime < 18500) //
@@ -128,9 +130,9 @@ public class GlowSquidEntity extends SquidEntity {
     @Environment(EnvType.CLIENT)
     private void addClientLight() {
         this.worldObj.setLightValue(EnumSkyBlock.Block, (int) this.posX,
-                (int) this.posY, (int) this.posZ, 15);
+                (int) this.posY, (int) this.posZ, 13);
         this.worldObj.markBlockRangeForRenderUpdate((int) this.posX,
-                (int) this.posY, (int) this.posX, 12, 12, 12);
+                (int) this.posY, (int) this.posX, 8, 8, 8);
         this.worldObj.markBlockForUpdate((int) this.posX, (int) this.posY,
                 (int) this.posZ);
         this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
