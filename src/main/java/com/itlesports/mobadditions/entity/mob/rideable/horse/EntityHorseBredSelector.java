@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.entity.mob.rideable;
+package com.itlesports.mobadditions.entity.mob.rideable.horse;
 import net.minecraft.src.*;
 final class EntityHorseBredSelector implements IEntitySelector
 {

@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.entity.mob.aquatic;
+package com.itlesports.mobadditions.entity.mob.aquatic.squid;
 
 import btw.client.render.entity.SquidRenderer;
 import net.fabricmc.api.EnvType;

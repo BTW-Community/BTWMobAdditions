@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.entity.mob.rideable;
+package com.itlesports.mobadditions.entity.mob.rideable.horse;
 import com.itlesports.mobadditions.entity.EntityLivingData;
 
 public class HorseEntityGroupData extends EntityLivingData {

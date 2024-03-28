@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.entity.mob.rideable;
+package com.itlesports.mobadditions.entity.mob.rideable.horse;
 
 import com.google.common.collect.Maps;
 import java.util.Map;

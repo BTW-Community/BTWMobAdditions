@@ -1,6 +1,6 @@
 package com.itlesports.mobadditions.init.lighting;
 
-import com.itlesports.mobadditions.entity.mob.aquatic.GlowSquidEntity;
+import com.itlesports.mobadditions.entity.mob.aquatic.squid.GlowSquidEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;

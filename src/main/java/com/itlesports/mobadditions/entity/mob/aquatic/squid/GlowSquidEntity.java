@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.entity.mob.aquatic;
+package com.itlesports.mobadditions.entity.mob.aquatic.squid;
 
 import btw.entity.mob.SquidEntity;
 import btw.item.BTWItems;

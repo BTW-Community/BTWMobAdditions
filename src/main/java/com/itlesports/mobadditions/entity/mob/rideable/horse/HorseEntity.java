@@ -1,14 +1,11 @@
-package com.itlesports.mobadditions.entity.mob.rideable;
+package com.itlesports.mobadditions.entity.mob.rideable.horse;
 
 import btw.entity.mob.SquidEntity;
 import btw.entity.mob.behavior.*;
-import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.entity.EntityLivingBase;
 import com.itlesports.mobadditions.entity.EntityLivingData;
 import com.itlesports.mobadditions.entity.mob.attributes.*;
 import com.itlesports.mobadditions.item.ModItems;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
 import btw.item.BTWItems;
 

@@ -1,6 +1,5 @@
-package com.itlesports.mobadditions.entity.mob.rideable;
+package com.itlesports.mobadditions.entity.mob.rideable.horse;
 
-import com.itlesports.mobadditions.entity.mob.rideable.KickingAnimal;
 import org.lwjgl.opengl.GL11;
 import net.minecraft.src.*;
 

@@ -1,14 +1,11 @@
 package com.itlesports.mobadditions.entity;
 
-import btw.client.render.entity.WolfRenderer;
-import btw.entity.mob.WolfEntity;
 import com.itlesports.mobadditions.entity.mob.fox.*;
-import com.itlesports.mobadditions.entity.mob.rideable.HorseEntity;
-import com.itlesports.mobadditions.entity.mob.rideable.HorseModel;
-import com.itlesports.mobadditions.entity.mob.rideable.HorseRenderer;
+import com.itlesports.mobadditions.entity.mob.rideable.horse.HorseEntity;
+import com.itlesports.mobadditions.entity.mob.rideable.horse.HorseModel;
+import com.itlesports.mobadditions.entity.mob.rideable.horse.HorseRenderer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.src.ModelWolf;
 import net.minecraft.src.RenderManager;
 
 @Environment(EnvType.CLIENT)

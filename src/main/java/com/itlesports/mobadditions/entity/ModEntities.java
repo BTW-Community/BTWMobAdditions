@@ -2,8 +2,8 @@ package com.itlesports.mobadditions.entity;
 
 import com.itlesports.mobadditions.entity.mob.fox.ArcticFoxEntity;
 import com.itlesports.mobadditions.entity.mob.fox.FoxEntity;
-import com.itlesports.mobadditions.entity.mob.aquatic.GlowSquidEntity;
-import com.itlesports.mobadditions.entity.mob.rideable.HorseEntity;
+import com.itlesports.mobadditions.entity.mob.aquatic.squid.GlowSquidEntity;
+import com.itlesports.mobadditions.entity.mob.rideable.horse.HorseEntity;
 import com.itlesports.mobadditions.entity.mob.wolf.*;
 
 import net.minecraft.src.EntityList;

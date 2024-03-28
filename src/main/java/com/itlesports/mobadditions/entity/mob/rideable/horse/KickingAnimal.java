@@ -1,16 +1,14 @@
-package com.itlesports.mobadditions.entity.mob.rideable;
+package com.itlesports.mobadditions.entity.mob.rideable.horse;
 
 import btw.client.network.packet.handler.EntityEventPacketHandler;
 import btw.network.packet.BTWPacketManager;
 import btw.world.util.WorldUtils;
-import com.itlesports.mobadditions.entity.EntityLivingBase;
 import com.itlesports.mobadditions.entity.EntityLivingData;
 import com.itlesports.mobadditions.entity.mob.attributes.*;
 import net.minecraft.src.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
-import java.util.Iterator;
 import java.util.List;
 
 public abstract class KickingAnimal extends EntityAnimal {
