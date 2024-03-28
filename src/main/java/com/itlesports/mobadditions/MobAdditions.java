@@ -5,6 +5,7 @@ import btw.BTWAddon;
 import com.itlesports.mobadditions.entity.mob.aquatic.squid.GlowSquidEntity;
 import com.itlesports.mobadditions.entity.mob.fox.ArcticFoxEntity;
 import com.itlesports.mobadditions.entity.mob.fox.FoxEntity;
+import com.itlesports.mobadditions.entity.mob.rideable.horse.HorseEntity;
 import com.itlesports.mobadditions.entity.mob.wolf.*;
 import com.itlesports.mobadditions.init.lighting.GlowLighting;
 import com.itlesports.mobadditions.init.lighting.GlowSquidLighting;
@@ -92,6 +93,14 @@ public class MobAdditions extends BTWAddon {
 
         BiomeGenBase.forest.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(WoodsWolfEntity.class, 20, 4, 4));
         BiomeGenBase.forestHills.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(WoodsWolfEntity.class, 20, 4, 4));
+
+        BiomeGenBase.plains.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(HorseEntity.class, 10, 4, 4));
+        BiomeGenBase.forest.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(HorseEntity.class, 10, 4, 4));
+        BiomeGenBase.forestHills.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(HorseEntity.class, 10, 4, 4));
+        BiomeGenBase.swampland.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(HorseEntity.class, 10, 4, 4));
+        BiomeGenBase.desert.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(HorseEntity.class, 10, 4, 4));
+        BiomeGenBase.desertHills.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(HorseEntity.class, 10, 4, 4));
+
         //<biome>.getSpawnableList(EnumCreatureType.<type>).add(new SpawnListEntry(<yourEntity>.class, <weight>, <maxNumber>, <minNumber>));
         //BiomeGenBase.hell.getSpawnableList(EnumCreatureType.lavaCreature).add(new SpawnListEntry(SocksMobsEntitySquidLava.class, 100, 4, 4));
     }
