@@ -29,3 +29,7 @@ entity.glowsquidEntity.name=Glow Squid
 
 entity.horseEntity.name=Horse
 entity.horse.name=Horse
+entity.donkey.name=Donkey
+entity.mule.name=Mule
+entity.zombiehorse.name=Zombie Horse
+entity.skeletonhorse.name=Skeleton Horse
