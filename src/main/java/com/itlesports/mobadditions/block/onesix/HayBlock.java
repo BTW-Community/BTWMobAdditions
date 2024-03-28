@@ -8,6 +8,12 @@ public class HayBlock extends BlockRotatedPillar
         super(par1, Material.grass);
         this.setCreativeTab(CreativeTabs.tabBlock);
     }
+    @Override
+    public String getItemIconName()
+    {
+        return "hay_block";
+    }
+
 
     /**
      * The type of render function that is called for this block

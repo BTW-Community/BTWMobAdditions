@@ -1,12 +1,11 @@
 package com.itlesports.mobadditions.item;
 
 import btw.item.BTWItems;
+import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.item.food.cookedChevalItem;
 import com.itlesports.mobadditions.item.food.cookedFoxChopItem;
 import com.itlesports.mobadditions.item.food.rawChevalItem;
 import com.itlesports.mobadditions.item.food.rawFoxChopItem;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
 
 public class ModItems extends BTWItems {
@@ -30,7 +29,9 @@ public class ModItems extends BTWItems {
         horseArmorGold = new Item(706).setUnlocalizedName("horseArmorGold").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
         horseArmorDiamond = new Item(707).setUnlocalizedName("horseArmorDiamond").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
     }
-
+public static void registerModBlockItems() {
+        Item.suppressConflictWarnings = true;
+}
 
 
 }

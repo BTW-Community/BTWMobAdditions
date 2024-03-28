@@ -1,6 +1,6 @@
 package com.itlesports.mobadditions.entity.mob.rideable.horse;
 
-public class ResourceLocation
+public class ResourceLocation implements Comparable<ResourceLocation>
 {
     private final String resourceDomain;
     private final String resourcePath;
@@ -22,6 +22,7 @@ public class ResourceLocation
 
     public ResourceLocation(String par1Str)
     {
+        //par1Str = par1Str.charAt(0) == '/' ? par1Str.substring(1) : par1Str;
         String var2 = "minecraft";
         String var3 = par1Str;
         int var4 = par1Str.indexOf(58);
@@ -75,5 +76,12 @@ public class ResourceLocation
     public int hashCode()
     {
         return 31 * this.resourceDomain.hashCode() + this.resourcePath.hashCode();
+    }
+
+    @Override
+    public int compareTo(ResourceLocation that) {
+        int i = this.resourcePath.compareTo(that.resourcePath);
+        if (i != 0) return i;
+        return this.resourceDomain.compareTo(that.resourceDomain);
     }
 }

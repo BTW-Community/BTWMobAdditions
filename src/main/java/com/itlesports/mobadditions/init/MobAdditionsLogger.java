@@ -2,6 +2,7 @@ package com.itlesports.mobadditions.init;
 
 import btw.AddonHandler;
 import com.itlesports.mobadditions.MobAdditions;
+import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.entity.ModEntities;
 import com.itlesports.mobadditions.entity.ModRenderMapper;
 import com.itlesports.mobadditions.item.ModItems;
@@ -24,7 +25,11 @@ public class MobAdditionsLogger implements ModInitializer {
 		AddonHandler.logMessage("Mob Additions Initializing...");
 		AddonHandler.logMessage("Mob Additions Initializing Items...");
 		ModItems.registerModItems();
+		ModItems.registerModBlockItems();
 		AddonHandler.logMessage("Mob Additions Items Initialized!");
+		AddonHandler.logMessage("Mob Addtions Initializing Blocks...");
+		ModBlocks.registerModBlocks();
+		AddonHandler.logMessage("Mob Additions Blocks Initialized!");
 		AddonHandler.logMessage("Mob Additions Initializing Entites...");
 		ModEntities.createModEntityMappings();
 		AddonHandler.logMessage("Mob Additions Entities Initialized!");

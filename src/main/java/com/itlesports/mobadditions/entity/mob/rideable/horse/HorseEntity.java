@@ -53,6 +53,8 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
     public HorseEntity(World par1World)
     {
         super(par1World);
+        this.texture = "/mobadditions/entity/mob/horse/horse_brown.png";
+        this.moveSpeed = 0.2F;
         this.setSize(1.4F, 1.6F);
         this.isImmuneToFire = false;
         this.setChested(false);
@@ -115,9 +117,9 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
     public String getEntityName()
     {
         //if (this.hasCustomNameTag())
-        {
+       // {
             //return this.getCustomNameTag();
-        }
+       // }
         //else
         {
             int var1 = this.getHorseType();
@@ -1125,7 +1127,6 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
     public int getMaxHealth() {
         return 30;
     }
-
     private void openHorseMouth()
     {
         if (!this.worldObj.isRemote)
