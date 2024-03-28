@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.entity.mob;
+package com.itlesports.mobadditions.entity.mob.fox;
 
 import btw.entity.mob.*;
 import btw.entity.mob.behavior.*;
@@ -16,7 +16,7 @@ public class FoxEntity extends WolfEntity {
         super(world);
         moveSpeed = MOVE_SPEED_AGGRESSIVE;
 
-        this.texture = "/mobadditions/entity/mob/fox.png";
+        this.texture = "/mobadditions/entity/mob/fox/fox.png";
         tasks.removeAllTasks();
         tasks.addTask( 1, new EntityAISwimming( this ) );
         tasks.addTask( 2, new PanicOnHeadCrabBehavior(this, MOVE_SPEED_AGGRESSIVE));
@@ -58,14 +58,14 @@ public class FoxEntity extends WolfEntity {
     public String getTexture() {
         if (isTamed()) {
             if (isStarving()) {
-                return "/mobadditions/entity/mob/fox_starving.png";
+                return "/mobadditions/entity/mob/fox/fox_starving.png";
             }
 
-            return "/mobadditions/entity/fox_tame.png";
+            return "/mobadditions/entity/mob/fox/fox_tame.png";
         } else if (isAngry()) {
-            return "/mobadditions/entity/mob/fox_angry.png";
+            return "/mobadditions/entity/mob/fox/fox_angry.png";
         } else if (isStarving() || hasAttackTarget()) {
-            return "/mobadditions/entity/mob/fox_starving.png";
+            return "/mobadditions/entity/mob/fox/fox_starving.png";
         }
 
         return texture; // intentionally bypass super method
