@@ -7,6 +7,8 @@ import com.itlesports.mobadditions.entity.EntityLivingBase;
 import com.itlesports.mobadditions.entity.EntityLivingData;
 import com.itlesports.mobadditions.entity.mob.attributes.*;
 import com.itlesports.mobadditions.item.ModItems;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
 import btw.item.BTWItems;
 
@@ -733,10 +735,10 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
         else if (!this.isTame() && this.func_110256_cu()) {
             return false;
         }
-        else if (this.isTame() && this.isAdultHorse() && player.isSneaking()) {
+        //else if (this.isTame() && this.isAdultHorse() && player.isSneaking()) {
             //this.openGUI(player);
-            return true;
-        }
+           // return true;
+       // }
         else if (this.func_110253_bW() && this.riddenByEntity != null) {
             return super.interact(player);
         }
@@ -780,9 +782,9 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
                     else if (item.itemID == Item.bread.itemID) {
                         healAmount = 7.0F;
                     }
-                    else if (item.itemID == ModBlocks.hay.blockID) {
-                        healAmount = 20.0F;
-                    }
+                    //else if (item.itemID == ModBlocks.hay.blockID) {
+                       // healAmount = 20.0F;
+                   //}
                     else if (item.itemID == Item.appleRed.itemID) {
                         healAmount = 3.0F;
                     }
@@ -814,9 +816,9 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
                 }
 
                 if (!this.isTame() && !itemConsumed) {
-                    if (this.func_111282_a(getHeldItem(), this)) {
-                        return true;
-                    }
+                    //if (this.func_111282_a(getHeldItem(), this)) {
+                       // return true;
+                   // }
 
                     this.makeHorseRearWithSound();
                     return true;
@@ -1732,8 +1734,8 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
     {
         this.objectChanged = false;
     }
-    public static boolean func_111282_a(ItemStack itemStack, EntityLiving par2EntityLiving)
-    {
-        return Item.itemsList[itemStack.itemID].itemInteractionForEntity(itemStack, par2EntityLiving);
-    }
+    //public static boolean func_111282_a(ItemStack itemStack, EntityLiving par2EntityLiving)
+    //{
+       // return Item.itemsList[itemStack.itemID].itemInteractionForEntity(itemStack, par2EntityLiving);
+    //}
 }
