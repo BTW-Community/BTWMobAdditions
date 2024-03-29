@@ -15,6 +15,8 @@ public class ModItems extends BTWItems {
     public static Item cookedCheval;
     public static Item glowInkSac;
     public static Item lavaInkSac;
+    public static Item glowPowder;
+    public static Item lavaPowder;
     public static Item horseArmorIron;
     public static Item horseArmorGold;
     public static Item horseArmorDiamond;
@@ -24,13 +26,15 @@ public class ModItems extends BTWItems {
         rawCheval = new rawChevalItem(702,4, 0.25F, false, "rawChevalItem", true );
         cookedCheval = new cookedChevalItem(703,5, 0.25F, false, "cookedChevalItem", false );
 
-        glowInkSac = new glowInkSacItem(704, 1, 0.25F,false,"glowInkSacItem");
-        lavaInkSac = new lavaInkSacItem(705, 1, 0.25F,false,"lavaInkSacItem");
+        glowInkSac = new glowInkSacItem(704, 4, 0.25F,false,"glowInkSacItem");
+        lavaInkSac = new lavaInkSacItem(705, 4, 0.25F,false,"lavaInkSacItem");
 
+        glowPowder = new glowPowderItem(706, 1, 0.1F, false, "glowPowderItem");
+        lavaPowder = new lavaPowderItem(707, 1, 0.1F, false, "lavaPowderItem");
 
-        horseArmorIron = new Item(706).setUnlocalizedName("horseArmorIron").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
-        horseArmorGold = new Item(707).setUnlocalizedName("horseArmorGold").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
-        horseArmorDiamond = new Item(708).setUnlocalizedName("horseArmorDiamond").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
+        horseArmorIron = new Item(708).setUnlocalizedName("horseArmorIron").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
+        horseArmorGold = new Item(709).setUnlocalizedName("horseArmorGold").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
+        horseArmorDiamond = new Item(710).setUnlocalizedName("horseArmorDiamond").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
     }
 public static void registerModBlockItems() {
         Item.suppressConflictWarnings = true;
