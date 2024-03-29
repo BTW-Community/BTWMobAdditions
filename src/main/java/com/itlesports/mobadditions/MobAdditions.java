@@ -3,6 +3,7 @@ package com.itlesports.mobadditions;
 import btw.AddonHandler;
 import btw.BTWAddon;
 import com.itlesports.mobadditions.entity.mob.aquatic.squid.GlowSquidEntity;
+import com.itlesports.mobadditions.entity.mob.aquatic.squid.LavaSquidEntity;
 import com.itlesports.mobadditions.entity.mob.fox.ArcticFoxEntity;
 import com.itlesports.mobadditions.entity.mob.fox.FoxEntity;
 import com.itlesports.mobadditions.entity.mob.rideable.horse.HorseEntity;
@@ -102,7 +103,7 @@ public class MobAdditions extends BTWAddon {
         BiomeGenBase.desertHills.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(HorseEntity.class, 10, 4, 4));
 
         //<biome>.getSpawnableList(EnumCreatureType.<type>).add(new SpawnListEntry(<yourEntity>.class, <weight>, <maxNumber>, <minNumber>));
-        //BiomeGenBase.hell.getSpawnableList(EnumCreatureType.lavaCreature).add(new SpawnListEntry(SocksMobsEntitySquidLava.class, 100, 4, 4));
+        BiomeGenBase.hell.getSpawnableList(EnumCreatureType.creature).add(new SpawnListEntry(LavaSquidEntity.class, 100, 4, 4));
     }
 
     public static void AddNewBlock()
