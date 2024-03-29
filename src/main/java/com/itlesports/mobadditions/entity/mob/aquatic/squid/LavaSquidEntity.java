@@ -64,7 +64,7 @@ public void onLivingUpdate() {
 
             for (int var6 = 0; var6 < var3; ++var6)
             {
-                this.entityDropItem(new ItemStack(ModItems.glowInkSac, 1, 0), 0.0F);
+                this.entityDropItem(new ItemStack(ModItems.lavaInkSac, 1, 0), 0.0F);
             }
         }
 
