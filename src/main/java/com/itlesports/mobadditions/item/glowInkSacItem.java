@@ -8,7 +8,7 @@ public class glowInkSacItem extends FoodItem {
     public glowInkSacItem(int iItemID, int iHungerHealed, float fSaturationModifier, boolean bWolfMeat, String sItemName) {
         super(iItemID, iHungerHealed, fSaturationModifier, bWolfMeat, sItemName);
         this.setCreativeTab(CreativeTabs.tabMaterials);
-        this.setPotionEffect(Potion.nightVision.id, 15 * 20, 0, 1.0F);
+        this.setPotionEffect(Potion.nightVision.id, 15, 0, 1.0F);
     }
 
     public ItemStack onEaten(ItemStack var1, World var2, EntityPlayer var3) {
