@@ -1,4 +1,4 @@
 package com.itlesports.mobadditions.entity.mob.aquatic.squid;
 
-public class LavaSquid {
+public class LavaSquidEntity {
 }
