@@ -8,6 +8,7 @@ public class glowPowderItem extends FoodItem {
     public glowPowderItem(int iItemID, int iHungerHealed, float fSaturationModifier, boolean bWolfMeat, String sItemName) {
         super(iItemID, iHungerHealed, fSaturationModifier, bWolfMeat, sItemName);
         this.setCreativeTab(CreativeTabs.tabMaterials);
+        // defines main potion effect
         this.setPotionEffect(Potion.nightVision.id, 30, 0, 1.0F);
     }
 
