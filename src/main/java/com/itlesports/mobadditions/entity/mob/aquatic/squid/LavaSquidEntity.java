@@ -1,4 +1,101 @@
 package com.itlesports.mobadditions.entity.mob.aquatic.squid;
 
-public class LavaSquidEntity {
+import btw.entity.mob.SquidEntity;
+import btw.item.BTWItems;
+import com.itlesports.mobadditions.item.ModItems;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.src.EnumSkyBlock;
+import net.minecraft.src.ItemStack;
+import net.minecraft.src.World;
+
+public class LavaSquidEntity extends SquidEntity {
+    public LavaSquidEntity(World world) {
+        super(world);
+        this.texture = "/mobadditions/entity/mob/aquatic/lavasquid.png";
+    }
+
+public void onLivingUpdate() {
+        super.onLivingUpdate();
+        addClientLight();
+    if (this.isDead) {
+        this.worldObj.updateLightByType(EnumSkyBlock.Block,
+                (int) this.posX, (int) this.posY, (int) this.posZ);
+    }
+}
+    @Override
+    protected void dropFewItems(boolean var1, int var2)
+    {
+        //Ink Sacks
+        /**
+         int var3 = this.rand.nextInt(3 + var2) + 1;
+
+         for (int var4 = 0; var4 < var3; ++var4)
+         {
+         this.entityDropItem(new ItemStack(Item.dyePowder, 1, 0), 0.0F);
+         }
+         */
+
+        //Shards
+        /**
+         var3 = this.rand.nextInt(3 + var2) + 1;
+
+         for (int var4 = 0; var4 < var3; ++var4)
+         {
+         this.entityDropItem(new ItemStack(DecoDefs.PrismarineShard, 1, 0), 0.0F);
+         }
+         */
+
+        //Glands
+        if (this.rand.nextInt(8) - var2 <= 0)
+        {
+            this.dropItem(BTWItems.mysteriousGland.itemID, 1);
+        }
+
+        if (this.worldObj.provider.dimensionId != 1) //not nether and normal squid
+        {
+            ///Glow Ink Sacks
+            int var3 = this.rand.nextInt(3 + var2) + 1;
+
+            for (int var6 = 0; var6 < var3; ++var6)
+            {
+                this.entityDropItem(new ItemStack(ModItems.glowInkSac, 1, 0), 0.0F);
+            }
+        }
+
+    }
+    @Environment(EnvType.CLIENT)
+    private void addClientLight() {
+        this.worldObj.setLightValue(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY, (int) this.posZ, 13);
+        this.worldObj.markBlockRangeForRenderUpdate((int) this.posX,
+                (int) this.posY, (int) this.posX, 8, 8, 8);
+        this.worldObj.markBlockForUpdate((int) this.posX, (int) this.posY,
+                (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY + 1, (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY - 1, (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block,
+                (int) this.posX + 1, (int) this.posY, (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block,
+                (int) this.posX - 1, (int) this.posY, (int) this.posZ);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY, (int) this.posZ + 1);
+        this.worldObj.updateLightByType(EnumSkyBlock.Block, (int) this.posX,
+                (int) this.posY, (int) this.posZ - 1);
+    }
+    @Override
+    @Environment(EnvType.CLIENT)
+    public int getBrightnessForRender(float par1)
+    {
+        return 15728880;
+    }
+
+
+
+
+
+
+
 }

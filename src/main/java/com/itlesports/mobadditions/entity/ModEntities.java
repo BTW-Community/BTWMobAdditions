@@ -1,5 +1,6 @@
 package com.itlesports.mobadditions.entity;
 
+import com.itlesports.mobadditions.entity.mob.aquatic.squid.LavaSquidEntity;
 import com.itlesports.mobadditions.entity.mob.fox.ArcticFoxEntity;
 import com.itlesports.mobadditions.entity.mob.fox.FoxEntity;
 import com.itlesports.mobadditions.entity.mob.aquatic.squid.GlowSquidEntity;
@@ -18,9 +19,10 @@ public class ModEntities {
     public static int StripedWolfEntityID = 706;
     public static int WoodsWolfEntityID = 707;
     public static int GlowSquidEntityID = 708;
-    public static int FoxEntityID = 709;
-    public static int ArcticFoxEntityID = 710;
-    public static int HorseEntityID = 711;
+    public static int LavaSquidEntityID = 709;
+    public static int FoxEntityID = 710;
+    public static int ArcticFoxEntityID = 711;
+    public static int HorseEntityID = 712;
     public static void createModEntityMappings() {
         EntityList.addMapping(AshenWolfEntity.class,"ashenwolfEntity", AshenWolfEntityID,0,0);
         EntityList.addMapping(BlackWolfEntity.class,"blackwolfEntity", BlackWolfEntityID,0,0);
@@ -34,6 +36,7 @@ public class ModEntities {
         EntityList.addMapping(ArcticFoxEntity.class,"arcticFoxEntity", ArcticFoxEntityID,0,0);
 
         EntityList.addMapping(GlowSquidEntity.class,"glowsquidEntity", GlowSquidEntityID,0x164f4e, 0x4ddaba);
+        EntityList.addMapping(LavaSquidEntity.class,"lavasquidEntity", LavaSquidEntityID,0x164f4e, 0x4ddaba);
 
         EntityList.addMapping(HorseEntity.class,"horseEntity", HorseEntityID,0, 0);
     }
