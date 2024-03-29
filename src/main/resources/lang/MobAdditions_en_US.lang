@@ -1,6 +1,7 @@
 # Items
 
 item.glowInkSacItem.name=Glow Ink Sac
+item.lavaInkSacItem.name=Lava Ink Sac
 
 item.cookedFoxChopItem.name=Cooked Foxchop
 item.rawFoxChopItem.name=Raw Foxchop
@@ -22,10 +23,12 @@ entity.snowywolfEntity.name=Snowy Wolf
 entity.spottedwolfEntity.name=Spotted Wolf
 entity.stripedwolfEntity.name=Striped Wolf
 entity.woodswolfEntity.name=Woods Wolf
+
 entity.foxEntity.name=Fox
 entity.arcticFoxEntity.name=Arctic Fox
 
 entity.glowsquidEntity.name=Glow Squid
+entity.lavasquidEntity.name=Lava Squid
 
 entity.horseEntity.name=Horse
 entity.horse.name=Horse
