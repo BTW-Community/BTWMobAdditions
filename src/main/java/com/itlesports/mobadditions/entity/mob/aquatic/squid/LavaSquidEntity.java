@@ -13,6 +13,7 @@ public class LavaSquidEntity extends SquidEntity {
     public LavaSquidEntity(World world) {
         super(world);
         this.texture = "/mobadditions/entity/mob/aquatic/lavasquid.png";
+        this.isImmuneToFire = true;
     }
 
 public void onLivingUpdate() {
