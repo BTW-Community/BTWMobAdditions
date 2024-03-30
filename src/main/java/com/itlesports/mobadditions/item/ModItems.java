@@ -28,7 +28,7 @@ public class ModItems extends BTWItems {
         rawFoxChop = new rawFoxChopItem(700,4, 0.25F, true, "rawFoxChopItem", true );
         cookedFoxChop = new cookedFoxChopItem(701,5, 0.25F, true, "cookedFoxChopItem", false );
 
-        sinewExtractingFox = new SinewExtractingItem(702, "sinewExtractingFox");
+        sinewExtractingFox = new SinewExtractingItem(702, "sinewExtractingFoxItem").setUnlocalizedName("sinewExtractingFoxItem");
 
         rawCheval = new rawChevalItem(703,4, 0.25F, false, "rawChevalItem", true );
         cookedCheval = new cookedChevalItem(704,5, 0.25F, false, "cookedChevalItem", false );
