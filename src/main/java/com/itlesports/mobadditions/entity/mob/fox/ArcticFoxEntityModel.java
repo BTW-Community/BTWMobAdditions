@@ -1,8 +1,6 @@
 package com.itlesports.mobadditions.entity.mob.fox;
 
-import net.minecraft.src.Entity;
-import net.minecraft.src.ModelBase;
-import net.minecraft.src.ModelRenderer;
+import net.minecraft.src.*;
 
 public class ArcticFoxEntityModel extends ModelBase {
     private final ModelRenderer body;
@@ -12,6 +10,7 @@ public class ArcticFoxEntityModel extends ModelBase {
     private final ModelRenderer leg2;
     private final ModelRenderer leg3;
     private final ModelRenderer tail;
+    private float headRotation;
 
     public ArcticFoxEntityModel() {
         textureWidth = 48;
@@ -72,8 +71,11 @@ public class ArcticFoxEntityModel extends ModelBase {
      * "far" arms and legs can swing at most.
      */
     @Override
-    public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity) {
-
+    public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6, Entity par7Entity) {
+        this.head.rotateAngleX = par5 / (180F / (float)Math.PI);
+        this.head.rotateAngleY = par4 / (180F / (float)Math.PI);
+        this.tail.rotateAngleX = par3;
+        head.rotateAngleX = headRotation;
     }
 
     /**
@@ -83,5 +85,51 @@ public class ArcticFoxEntityModel extends ModelBase {
         modelRenderer.rotateAngleX = x;
         modelRenderer.rotateAngleY = y;
         modelRenderer.rotateAngleZ = z;
+    }
+    public void setLivingAnimations(EntityLiving par1EntityLiving, float par2, float par3, float par4) {
+        ArcticFoxEntity var5 = (ArcticFoxEntity)par1EntityLiving;
+        if (var5.isAngry()|| var5.isWildAndHostile() )
+        {
+            this.tail.rotateAngleY = 0.0F;
+        }
+        else
+        {
+            this.tail.rotateAngleY = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
+        }
+        if (var5.isSitting())
+        {
+            this.body.setRotationPoint(-1.0F, 16F, -3.0F);
+            this.body.rotateAngleX = ((float)Math.PI * 2F / 5F);
+            this.tail.setRotationPoint(-1.0F, 18.0F, 4.0F);
+            this.leg0.setRotationPoint(-2.5F, 20.0F, 2.0F);
+            this.leg0.rotateAngleX = ((float)Math.PI * 3F / 2F);
+            this.leg1.setRotationPoint(0.5F, 20.0F, 2.0F);
+            this.leg1.rotateAngleX = ((float)Math.PI * 3F / 2F);
+            this.leg2.rotateAngleX = 5.811947F;
+            this.leg2.setRotationPoint(-2.49F, 17.0F, -4.0F);
+            this.leg3.rotateAngleX = 5.811947F;
+            this.leg3.setRotationPoint(0.51F, 17.0F, -4.0F);
+        }
+        else
+        {
+            this.body.setRotationPoint(0.0F, 16.0F, 0F);
+            this.body.rotateAngleX = ((float)Math.PI / 2F);
+            this.tail.setRotationPoint(-1.0F, 16.0F, 7.0F);
+            this.leg0.setRotationPoint(-2.5F, 16.0F, 7.0F);
+            this.leg1.setRotationPoint(0.5F, 16.0F, 7.0F);
+            this.leg2.setRotationPoint(-2.5F, 16.0F, -4.0F);
+            this.leg3.setRotationPoint(0.5F, 16.0F, -4.0F);
+            this.leg0.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
+            this.leg1.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float)Math.PI) * 1.4F * par3;
+            this.leg2.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float)Math.PI) * 1.4F * par3;
+            this.leg3.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
+        }
+        this.head.rotateAngleZ = var5.getInterestedAngle(par4) + var5.getShakeAngle(par4, 0.0F);
+        this.body.rotateAngleZ = var5.getShakeAngle(par4, -0.16F);
+        this.tail.rotateAngleZ = var5.getShakeAngle(par4, -0.2F);
+
+        this.head.rotationPointY = 13.5F + ((ArcticFoxEntity)par1EntityLiving).getGrazeHeadVerticalOffset(par4) * 5.0F;
+        headRotation = ((ArcticFoxEntity)par1EntityLiving).getGrazeHeadRotation(par4);
+        this.head.rotateAngleZ += var5.getPossessionHeadRotation();
     }
 }
