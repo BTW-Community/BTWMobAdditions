@@ -1,6 +1,7 @@
 package com.itlesports.mobadditions.entity;
 
 import com.itlesports.mobadditions.entity.mob.aquatic.squid.LavaSquidEntity;
+import com.itlesports.mobadditions.entity.mob.aquatic.squid.EntityLavaSquid;
 import com.itlesports.mobadditions.entity.mob.fox.ArcticFoxEntity;
 import com.itlesports.mobadditions.entity.mob.fox.FoxEntity;
 import com.itlesports.mobadditions.entity.mob.aquatic.squid.GlowSquidEntity;
@@ -23,6 +24,7 @@ public class ModEntities {
     public static int FoxEntityID = 710;
     public static int ArcticFoxEntityID = 711;
     public static int HorseEntityID = 712;
+    public static int EntityLavaSquidID = 713;
     public static void createModEntityMappings() {
         EntityList.addMapping(AshenWolfEntity.class,"ashenwolfEntity", AshenWolfEntityID,0,0);
         EntityList.addMapping(BlackWolfEntity.class,"blackwolfEntity", BlackWolfEntityID,0,0);

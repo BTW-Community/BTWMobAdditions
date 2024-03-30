@@ -1,6 +1,5 @@
 package com.itlesports.mobadditions.entity.mob.aquatic.squid;
 
-import btw.entity.mob.SquidEntity;
 import btw.item.BTWItems;
 import com.itlesports.mobadditions.item.ModItems;
 import net.fabricmc.api.EnvType;
@@ -9,12 +8,11 @@ import net.minecraft.src.EnumSkyBlock;
 import net.minecraft.src.ItemStack;
 import net.minecraft.src.World;
 
-public class LavaSquidEntity extends SquidEntity {
+public class LavaSquidEntity extends EntityLavaSquid {
     public LavaSquidEntity(World world) {
         super(world);
         this.texture = "/mobadditions/entity/mob/aquatic/lavasquid.png";
         this.isImmuneToFire = true;
-
     }
     public boolean isBurning()
     {
@@ -96,11 +94,4 @@ public void onLivingUpdate() {
     {
         return 15728880;
     }
-
-
-
-
-
-
-
 }

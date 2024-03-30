@@ -86,11 +86,16 @@ public class EntityLavaSquid extends EntityLavaMob
     {
         super( world );
 
-        texture = "/mobadditions/entity/mob/lavasquid.png";
+        texture = "/mobadditions/entity/mob/aquatic/lavasquid.png";
 
         setSize( 0.95F, 0.95F );
 
         tentacleAnimSpeed = 1F / (rand.nextFloat() + 1F ) * 0.2F;
+        this.isImmuneToFire = true;
+    }
+    public boolean isBurning()
+    {
+        return false;
     }
 
     @Override
