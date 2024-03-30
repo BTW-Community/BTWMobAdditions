@@ -11,6 +11,7 @@ public class CraftingRecipeList {
     public static void addRecipes() {
         addItemRecipes();
         addBlockRecipes();
+        addMeatCuringRecipes();
     }
     public static void addItemRecipes() {
         RecipeManager.addShapelessRecipe(new ItemStack(ModItems.glowPaste, 1), new Object[]{
@@ -31,8 +32,54 @@ public class CraftingRecipeList {
                 new ItemStack(ModItems.cookedFoxChop),
                 new ItemStack(BTWItems.sharpStone)
         });
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.tastySandwich, 2 ), new Object[] {
+                new ItemStack( Item.bread ),
+                new ItemStack( ModItems.cookedCheval )
+        });
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.tastySandwich, 2 ), new Object[] {
+                new ItemStack( Item.bread ),
+                new ItemStack( ModItems.cookedFoxChop )
+        });
+
+
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.steakAndPotatoes, 2 ), new Object[] {
+                new ItemStack( Item.bakedPotato ),
+                new ItemStack( ModItems.cookedCheval )
+        });
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.steakAndPotatoes, 2 ), new Object[] {
+                new ItemStack( BTWItems.boiledPotato),
+                new ItemStack( ModItems.cookedCheval )
+        });
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.steakDinner, 3 ), new Object[] {
+                new ItemStack( BTWItems.boiledPotato),
+                new ItemStack( BTWItems.cookedCarrot),
+                new ItemStack( ModItems.cookedCheval )
+        });
+
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.steakDinner, 3 ), new Object[] {
+                new ItemStack( Item.bakedPotato ),
+                new ItemStack( BTWItems.cookedCarrot),
+                new ItemStack( ModItems.cookedCheval )
+        });
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.wolfDinner, 3 ), new Object[] {
+                new ItemStack( BTWItems.boiledPotato),
+                new ItemStack( BTWItems.cookedCarrot),
+                new ItemStack( ModItems.cookedFoxChop)
+        });
+
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.wolfDinner, 3 ), new Object[] {
+                new ItemStack( Item.bakedPotato ),
+                new ItemStack( BTWItems.cookedCarrot),
+                new ItemStack( ModItems.cookedFoxChop)
+        });
     }
     public static void addBlockRecipes() {
 
+    }
+    public static void addMeatCuringRecipes() {
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.curedMeat), new Object[] {
+                new ItemStack( ModItems.rawCheval ), new ItemStack( BTWItems.nitre) });
+        RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.curedMeat), new Object[] {
+                new ItemStack( ModItems.rawFoxChop ), new ItemStack( BTWItems.nitre) });
     }
 }
