@@ -1,11 +1,11 @@
 package com.itlesports.mobadditions.item;
 
 import btw.item.BTWItems;
-import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.item.food.cookedChevalItem;
 import com.itlesports.mobadditions.item.food.cookedFoxChopItem;
 import com.itlesports.mobadditions.item.food.rawChevalItem;
 import com.itlesports.mobadditions.item.food.rawFoxChopItem;
+import com.itlesports.mobadditions.item.squid.*;
 import net.minecraft.src.*;
 
 public class ModItems extends BTWItems {
@@ -17,6 +17,8 @@ public class ModItems extends BTWItems {
     public static Item lavaInkSac;
     public static Item glowPowder;
     public static Item lavaPowder;
+    public static Item glowPaste;
+    public static Item lavaPaste;
     public static Item horseArmorIron;
     public static Item horseArmorGold;
     public static Item horseArmorDiamond;
@@ -31,6 +33,9 @@ public class ModItems extends BTWItems {
 
         glowPowder = new glowPowderItem(706, 1, 0.1F, false, "glowPowderItem");
         lavaPowder = new lavaPowderItem(707, 1, 0.1F, false, "lavaPowderItem");
+
+        glowPaste = new glowPasteItem(708, 4, 0.25F, false, "glowPasteItem");
+        lavaPaste = new lavaPasteItem(709, 4, 0.25F, false, "lavaPasteItem");
 
         horseArmorIron = new Item(708).setUnlocalizedName("horseArmorIron").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
         horseArmorGold = new Item(709).setUnlocalizedName("horseArmorGold").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);

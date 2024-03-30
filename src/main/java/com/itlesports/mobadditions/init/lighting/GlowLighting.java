@@ -1,6 +1,6 @@
 package com.itlesports.mobadditions.init.lighting;
 
-import com.itlesports.mobadditions.item.glowInkSacItem;
+import com.itlesports.mobadditions.item.squid.glowInkSacItem;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;

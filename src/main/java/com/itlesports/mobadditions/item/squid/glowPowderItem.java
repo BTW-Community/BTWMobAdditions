@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.item;
+package com.itlesports.mobadditions.item.squid;
 
 import btw.item.items.FoodItem;
 import net.minecraft.src.*;

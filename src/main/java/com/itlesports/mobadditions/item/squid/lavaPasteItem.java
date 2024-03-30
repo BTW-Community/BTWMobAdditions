@@ -1,11 +1,11 @@
-package com.itlesports.mobadditions.item;
+package com.itlesports.mobadditions.item.squid;
 
 import btw.item.items.FoodItem;
 import net.minecraft.src.*;
 
-public class lavaPowderItem extends FoodItem {
+public class lavaPasteItem extends FoodItem {
 
-    public lavaPowderItem(int iItemID, int iHungerHealed, float fSaturationModifier, boolean bWolfMeat, String sItemName) {
+    public lavaPasteItem(int iItemID, int iHungerHealed, float fSaturationModifier, boolean bWolfMeat, String sItemName) {
         super(iItemID, iHungerHealed, fSaturationModifier, bWolfMeat, sItemName);
         this.setCreativeTab(CreativeTabs.tabMaterials);
         this.setPotionEffect(Potion.fireResistance.id, 30, 0, 1.0F);
