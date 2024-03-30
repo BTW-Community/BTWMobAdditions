@@ -20,10 +20,10 @@ public class CraftingRecipeList {
                 new ItemStack(BTWItems.glue)
         });
         RecipeManager.addShapelessRecipe(new ItemStack(ModItems.sinewExtractingFox, 1), new Object[]{
-                new ItemStack(ModItems.rawFoxChop)
+                new ItemStack(ModItems.rawFoxChop, 2)
         });
         RecipeManager.addShapelessRecipe(new ItemStack(ModItems.sinewExtractingFox, 1), new Object[]{
-                new ItemStack(ModItems.cookedFoxChop)
+                new ItemStack(ModItems.cookedFoxChop, 2)
         });
     }
     public static void addBlockRecipes() {
