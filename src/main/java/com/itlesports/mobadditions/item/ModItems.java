@@ -2,6 +2,8 @@ package com.itlesports.mobadditions.item;
 
 import btw.item.BTWItems;
 import btw.item.items.SinewExtractingItem;
+import com.itlesports.mobadditions.block.ModBlocks;
+import com.itlesports.mobadditions.item.blockitem.HayBlockItem;
 import com.itlesports.mobadditions.item.food.cookedChevalItem;
 import com.itlesports.mobadditions.item.food.cookedFoxChopItem;
 import com.itlesports.mobadditions.item.food.rawChevalItem;
@@ -45,10 +47,24 @@ public class ModItems extends BTWItems {
         horseArmorIron = new Item(711).setUnlocalizedName("horseArmorIron").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
         horseArmorGold = new Item(712).setUnlocalizedName("horseArmorGold").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
         horseArmorDiamond = new Item(713).setUnlocalizedName("horseArmorDiamond").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
+        ModItems.createAssociatedItemsForModBlocks();
     }
-public static void registerModBlockItems() {
-        Item.suppressConflictWarnings = true;
-}
+    private static void createAssociatedItemsForModBlocks()
+    {
+        registerModBlockItems();
 
+        for (int iTempBlockID = 0; iTempBlockID < 4096; iTempBlockID++)
+        {
+            if (Block.blocksList[iTempBlockID] != null && Item.itemsList[iTempBlockID] == null)
+            {
+                Item.itemsList[iTempBlockID] = new ItemBlock(iTempBlockID - 256);
+            }
+        }
+
+    }
+    public static void registerModBlockItems() {
+        Item.suppressConflictWarnings = true;
+        Item.itemsList[2000] = new HayBlockItem( 2000 - 256);
+    }
 
 }

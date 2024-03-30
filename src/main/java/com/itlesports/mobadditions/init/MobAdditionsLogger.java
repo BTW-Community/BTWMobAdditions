@@ -28,7 +28,6 @@ public class MobAdditionsLogger implements ModInitializer {
 		AddonHandler.logMessage("Mob Additions Initializing...");
 		AddonHandler.logMessage("Mob Additions Initializing Items...");
 		ModItems.registerModItems();
-		ModItems.registerModBlockItems();
 		AddonHandler.logMessage("Mob Additions Items Initialized!");
 		AddonHandler.logMessage("Mob Addtions Initializing Blocks...");
 		ModBlocks.registerModBlocks();

@@ -21,6 +21,9 @@ item.horseArmorDiamond.name=Diamond Horse Armor
 item.horseArmorGold.name=Gold Horse Armor
 item.horseArmorIron.name=Iron Horse Armor
 
+# Blocks
+
+tile.hayBlock.name=Hay Block
 
 # Mobs
 
