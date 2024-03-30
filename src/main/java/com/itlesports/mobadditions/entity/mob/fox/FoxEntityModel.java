@@ -99,16 +99,16 @@ public class FoxEntityModel extends ModelBase {
 		}
 		else
 		{
-this.tail.rotateAngleY = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
+			this.tail.rotateAngleY = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
 		}
 		if (var5.isSitting())
 		{
-		this.body.setRotationPoint(-1.0F, 16F, -3.0F);
-		this.body.rotateAngleX = ((float)Math.PI * 2F / 5F);
-			this.tail.setRotationPoint(-1.0F, 21.0F, 6.0F);
-			this.leg0.setRotationPoint(-2.5F, 22.0F, 2.0F);
+			this.body.setRotationPoint(-1.0F, 16F, -3.0F);
+			this.body.rotateAngleX = ((float)Math.PI * 2F / 5F);
+			this.tail.setRotationPoint(-1.0F, 18.0F, 4.0F);
+			this.leg0.setRotationPoint(-2.5F, 20.0F, 2.0F);
 			this.leg0.rotateAngleX = ((float)Math.PI * 3F / 2F);
-			this.leg1.setRotationPoint(0.5F, 22.0F, 2.0F);
+			this.leg1.setRotationPoint(0.5F, 20.0F, 2.0F);
 			this.leg1.rotateAngleX = ((float)Math.PI * 3F / 2F);
 			this.leg2.rotateAngleX = 5.811947F;
 			this.leg2.setRotationPoint(-2.49F, 17.0F, -4.0F);
@@ -117,9 +117,9 @@ this.tail.rotateAngleY = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
 		}
 		else
 		{
-			this.body.setRotationPoint(0.0F, 14.0F, 2.0F);
+			this.body.setRotationPoint(0.0F, 16.0F, 0F);
 			this.body.rotateAngleX = ((float)Math.PI / 2F);
-			this.tail.setRotationPoint(-1.0F, 12.0F, 8.0F);
+			this.tail.setRotationPoint(-1.0F, 16.0F, 7.0F);
 			this.leg0.setRotationPoint(-2.5F, 16.0F, 7.0F);
 			this.leg1.setRotationPoint(0.5F, 16.0F, 7.0F);
 			this.leg2.setRotationPoint(-2.5F, 16.0F, -4.0F);
