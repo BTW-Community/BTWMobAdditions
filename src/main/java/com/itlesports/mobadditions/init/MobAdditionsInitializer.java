@@ -11,14 +11,7 @@ import com.itlesports.mobadditions.recipe.MillstoneRecipeList;
 import com.itlesports.mobadditions.recipe.SmeltingRecipeList;
 import net.fabricmc.api.ModInitializer;
 
-import java.util.logging.Logger;
-
-public class MobAdditionsLogger implements ModInitializer {
-
-	// This logger can be used to write text to the console and the log file.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final String MOD_ID = "mobadditions";
-	public static final Logger LOGGER = Logger.getLogger(MOD_ID);
+public class MobAdditionsInitializer implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
@@ -43,6 +36,7 @@ public class MobAdditionsLogger implements ModInitializer {
 		AddonHandler.logMessage("Mob Additions Entities Initialized!");
 		AddonHandler.logMessage("Mob Additions Initializing Entity Renderers...!");
 		ModRenderMapper.createModEntityRenderers();
+		ModRenderMapper.createTileEntityRenderers();
 		AddonHandler.logMessage("Mob Additions Entity Renderers Initialized!");
 	}
 

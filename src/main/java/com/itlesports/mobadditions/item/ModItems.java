@@ -2,7 +2,6 @@ package com.itlesports.mobadditions.item;
 
 import btw.item.BTWItems;
 import btw.item.items.SinewExtractingItem;
-import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.item.blockitem.HayBlockItem;
 import com.itlesports.mobadditions.item.food.cookedChevalItem;
 import com.itlesports.mobadditions.item.food.cookedFoxChopItem;

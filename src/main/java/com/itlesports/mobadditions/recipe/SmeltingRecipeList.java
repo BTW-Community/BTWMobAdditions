@@ -3,8 +3,6 @@ package com.itlesports.mobadditions.recipe;
 import btw.crafting.recipe.RecipeManager;
 import com.itlesports.mobadditions.item.ModItems;
 import net.minecraft.src.FurnaceRecipes;
-import net.minecraft.src.IEntityMultiPart;
-import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 
 public class SmeltingRecipeList {

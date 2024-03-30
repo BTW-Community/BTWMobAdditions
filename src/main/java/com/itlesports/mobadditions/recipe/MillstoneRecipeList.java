@@ -2,7 +2,6 @@ package com.itlesports.mobadditions.recipe;
 
 import btw.block.BTWBlocks;
 import btw.crafting.recipe.RecipeManager;
-import btw.item.BTWItems;
 import btw.util.ColorUtils;
 import com.itlesports.mobadditions.item.ModItems;
 import net.minecraft.src.Item;

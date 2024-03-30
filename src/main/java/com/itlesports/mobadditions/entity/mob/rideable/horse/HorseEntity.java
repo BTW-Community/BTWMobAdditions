@@ -118,12 +118,6 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
      * Gets the username of the entity.
      */
     public String getEntityName()
-    {
-        //if (this.hasCustomNameTag())
-       // {
-            //return this.getCustomNameTag();
-       // }
-        //else
         {
             int var1 = this.getHorseType();
 
@@ -146,7 +140,7 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
                     return StatCollector.translateToLocal("entity.skeletonhorse.name");
             }
         }
-    }
+
 
     private boolean getHorseWatchableBoolean(int par1)
     {

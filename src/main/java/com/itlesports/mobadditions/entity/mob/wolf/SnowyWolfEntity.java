@@ -1,7 +1,6 @@
 package com.itlesports.mobadditions.entity.mob.wolf;
 
 import btw.entity.mob.WolfEntity;
-import com.itlesports.mobadditions.entity.mob.fox.ArcticFoxEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.EntityAgeable;

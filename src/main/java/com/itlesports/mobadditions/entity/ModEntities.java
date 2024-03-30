@@ -1,7 +1,6 @@
 package com.itlesports.mobadditions.entity;
 
 import com.itlesports.mobadditions.entity.mob.aquatic.squid.LavaSquidEntity;
-import com.itlesports.mobadditions.entity.mob.aquatic.squid.EntityLavaSquid;
 import com.itlesports.mobadditions.entity.mob.fox.ArcticFoxEntity;
 import com.itlesports.mobadditions.entity.mob.fox.FoxEntity;
 import com.itlesports.mobadditions.entity.mob.aquatic.squid.GlowSquidEntity;

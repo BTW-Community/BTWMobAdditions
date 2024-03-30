@@ -19,10 +19,13 @@
   "environment": "*",
   "entrypoints": {
     "init": [
-      "com.itlesports.mobadditions.init.MobAdditionsLogger"
+      "com.itlesports.mobadditions.init.MobAdditionsInitializer"
     ],
     "preLaunch": [
       "com.itlesports.mobadditions.init.PreLaunchInitializer"
+    ],
+    "client": [
+      "com.itlesports.mobadditions.init.MobAdditionsClientInitializer"
     ]
   },
   "mixins": [

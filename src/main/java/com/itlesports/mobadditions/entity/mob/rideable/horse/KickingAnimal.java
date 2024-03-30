@@ -16,17 +16,6 @@ public abstract class KickingAnimal extends EntityAnimal {
     public float limbSwingAmount;
     public float prevLimbSwingAmount;
     public float limbSwing;
-    /*
-    public boolean hasCustomNameTag()
-    {
-        return this.dataWatcher.getWatchableObjectString(10).length() > 0;
-    }
-    public String getCustomNameTag()
-    {
-        return this.dataWatcher.getWatchableObjectString(10);
-    }
-
-     */
 
 
     public static final int KICK_ATTACK_TICKS_TO_COOLDOWN = 40;
