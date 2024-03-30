@@ -23,6 +23,14 @@ public class CraftingRecipeList {
                 "P", ModItems.lavaPowder,
                 "G", BTWItems.glue
         });
+        RecipeManager.addRecipe(new ItemStack(ModItems.sinewExtractingFox, 1), new Object[]{
+                "##",
+                "#", ModItems.rawFoxChop
+        });
+        RecipeManager.addRecipe(new ItemStack(ModItems.sinewExtractingFox, 1), new Object[]{
+                "##",
+                "#", ModItems.cookedFoxChop
+        });
     }
     public static void addBlockRecipes() {
 

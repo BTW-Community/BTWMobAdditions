@@ -5,8 +5,10 @@ import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.entity.ModEntities;
 import com.itlesports.mobadditions.entity.ModRenderMapper;
 import com.itlesports.mobadditions.item.ModItems;
+import com.itlesports.mobadditions.recipe.CauldronRecipeList;
 import com.itlesports.mobadditions.recipe.CraftingRecipeList;
 import com.itlesports.mobadditions.recipe.MillstoneRecipeList;
+import com.itlesports.mobadditions.recipe.SmeltingRecipeList;
 import net.fabricmc.api.ModInitializer;
 
 import java.util.logging.Logger;
@@ -33,7 +35,9 @@ public class MobAdditionsLogger implements ModInitializer {
 		AddonHandler.logMessage("Mob Additions Blocks Initialized!");
 		AddonHandler.logMessage("Mob Additions Initializing Recipes...");
 		CraftingRecipeList.addRecipes();
+		CauldronRecipeList.addRecipes();
 		MillstoneRecipeList.addRecipes();
+		SmeltingRecipeList.addRecipes();
 		AddonHandler.logMessage("Mob Additions Recipes Initialized");
 		AddonHandler.logMessage("Mob Additions Initializing Entites...");
 		ModEntities.createModEntityMappings();

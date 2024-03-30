@@ -1,6 +1,7 @@
 package com.itlesports.mobadditions.item;
 
 import btw.item.BTWItems;
+import btw.item.items.SinewExtractingItem;
 import com.itlesports.mobadditions.item.food.cookedChevalItem;
 import com.itlesports.mobadditions.item.food.cookedFoxChopItem;
 import com.itlesports.mobadditions.item.food.rawChevalItem;
@@ -11,6 +12,7 @@ import net.minecraft.src.*;
 public class ModItems extends BTWItems {
     public static Item rawFoxChop;
     public static Item cookedFoxChop;
+    public static Item sinewExtractingFox;
     public static Item rawCheval;
     public static Item cookedCheval;
     public static Item glowInkSac;
@@ -25,6 +27,9 @@ public class ModItems extends BTWItems {
     public static void registerModItems() {
         rawFoxChop = new rawFoxChopItem(700,4, 0.25F, true, "rawFoxChopItem", true );
         cookedFoxChop = new cookedFoxChopItem(701,5, 0.25F, true, "cookedFoxChopItem", false );
+
+        sinewExtractingFox = new SinewExtractingItem(702, "sinewExtractingFox");
+
         rawCheval = new rawChevalItem(702,4, 0.25F, false, "rawChevalItem", true );
         cookedCheval = new cookedChevalItem(703,5, 0.25F, false, "cookedChevalItem", false );
 
@@ -37,8 +42,8 @@ public class ModItems extends BTWItems {
         glowPaste = new glowPasteItem(708, 4, 0.25F, false, "glowPasteItem");
         lavaPaste = new lavaPasteItem(709, 4, 0.25F, false, "lavaPasteItem");
 
-        horseArmorIron = new Item(708).setUnlocalizedName("horseArmorIron").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
-        horseArmorGold = new Item(709).setUnlocalizedName("horseArmorGold").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
+        horseArmorIron = new Item(710).setUnlocalizedName("horseArmorIron").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
+        horseArmorGold = new Item(70).setUnlocalizedName("horseArmorGold").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
         horseArmorDiamond = new Item(710).setUnlocalizedName("horseArmorDiamond").setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc);
     }
 public static void registerModBlockItems() {
