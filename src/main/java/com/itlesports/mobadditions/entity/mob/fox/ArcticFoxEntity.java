@@ -104,7 +104,6 @@ public class ArcticFoxEntity extends WolfEntity {
     {
         super.onLivingUpdate();
 
-        return;
     }
     @Override
     protected int getDropItemId()

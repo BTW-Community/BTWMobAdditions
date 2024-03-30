@@ -198,24 +198,6 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
         return var1 >= 0 ? 1.0F : 0.5F + (float)(-24000 - var1) / -24000.0F * 0.5F;
     }
 
-    /**
-     * "Sets the scale for an ageable entity according to the boolean parameter, which says if it's a child."
-     */
-    /*
-    public void setScaleForAge(boolean par1)
-    {
-        if (par1)
-        {
-            this.setScale(this.getHorseSize());
-        }
-        else
-        {
-            this.setScale(1.0F);
-        }
-    }
-
-     */
-
     public boolean isHorseJumping()
     {
         return this.horseJumping;
@@ -230,6 +212,8 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
     {
         this.horseJumping = par1;
     }
+
+    //Lead Code Add after Lead BackPort
 /*
     public boolean allowLeashing()
     {
@@ -715,6 +699,7 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
 
         return this.field_110280_bR;
     }
+    //Opens Check GUI Requires Entity Player Mixin
 /*
     public void openGUI(EntityPlayer par1EntityPlayer)
     {
@@ -750,16 +735,16 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
             if (item != null) {
                 boolean itemConsumed = false;
 
-                /*if (this.func_110259_cr()) { // Can accept armor
+                if (this.func_110259_cr()) { // Can accept armor
                     byte var4 = -1;
 
-                    if (item.itemID == Item.horseArmorIron.itemID) {
+                    if (item.itemID == ModItems.horseArmorIron.itemID) {
                         var4 = 1;
                     }
-                    else if (item.itemID == Item.horseArmorGold.itemID) {
+                    else if (item.itemID == ModItems.horseArmorGold.itemID) {
                         var4 = 2;
                     }
-                    else if (item.itemID == Item.horseArmorDiamond.itemID) {
+                    else if (item.itemID == ModItems.horseArmorDiamond.itemID) {
                         var4 = 3;
                     }
 
@@ -768,11 +753,11 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
                             this.makeHorseRearWithSound();
                             return true;
                         }
-
-                        this.openGUI(player);
-                        return true;
+                        //Requires Entity Player Mixin
+                        //this.openGUI(player);
+                        //return true;
                     }
-                }*/
+                }
 
                 if (!itemConsumed && !this.func_110256_cu()) {
                     float healAmount = 0.0F;
@@ -821,8 +806,8 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
 
                 if (!this.isTame() && !itemConsumed) {
                     //if (this.func_111282_a(getHeldItem(), this)) {
-                       // return true;
-                   // }
+                       //return true;
+                   //}
 
                     this.makeHorseRearWithSound();
                     return true;
@@ -834,11 +819,11 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
                     itemConsumed = true;
                     this.func_110226_cD();
                 }*/
-
-                /*if (!itemConsumed && this.func_110253_bW() && !this.isHorseSaddled() && item.itemID == Item.saddle.itemID) {
-                    this.openGUI(player);
-                    return true;
-                }*/
+                //Requires Entity Player Mixin Crashes Game
+               // if (!itemConsumed && this.func_110253_bW() && !this.isHorseSaddled() && item.itemID == Item.saddle.itemID) {
+                    //this.openGUI(player);
+                    //return true;
+                //}
 
                 if (itemConsumed) {
                     if (!player.capabilities.isCreativeMode && --item.stackSize == 0) {
@@ -1368,12 +1353,12 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
             this.setOwnerName(par1NBTTagCompound.getString("OwnerName"));
         }
 
-        //AttributeInstance var2 = this.getAttributeMap().getAttributeInstanceByName("Speed");
+        AttributeInstance var2 = this.getAttributeMap().getAttributeInstanceByName("Speed");
 
-        //if (var2 != null)
-        //{
-            //this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(var2.getBaseValue() * 0.15D);
-        //}
+        if (var2 != null)
+        {
+            this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(var2.getBaseValue() * 0.15D);
+        }
 
         if (this.isChested())
         {
@@ -1419,6 +1404,8 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
         }
 
         this.func_110232_cE();
+
+
     }
 
     /**
@@ -1510,8 +1497,8 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
         var3.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(var14 / 3.0D);
         double var13 = this.getEntityAttribute(horseJumpStrength).getBaseValue() + this.getEntityAttribute(horseJumpStrength).getBaseValue() + this.func_110245_cM();
         var3.getEntityAttribute(horseJumpStrength).setAttribute(var13 / 3.0D);
-        //double var11 = this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getBaseValue() + this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getBaseValue() + this.func_110203_cN();
-        //var3.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(var11 / 0.15D);
+        double var11 = this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getBaseValue() + this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getBaseValue() + this.func_110203_cN();
+        var3.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(var11 / 0.15D);
 
         return var3;
     }
@@ -1742,8 +1729,9 @@ public class HorseEntity extends KickingAnimal implements IInvBasic
     {
         this.objectChanged = false;
     }
+    //Crashes Game
     //public static boolean func_111282_a(ItemStack itemStack, EntityLiving par2EntityLiving)
     //{
-       // return Item.itemsList[itemStack.itemID].itemInteractionForEntity(itemStack, par2EntityLiving);
+       //return Item.itemsList[itemStack.itemID].itemInteractionForEntity(itemStack, par2EntityLiving);
     //}
 }
