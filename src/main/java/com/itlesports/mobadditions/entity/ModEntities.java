@@ -38,6 +38,6 @@ public class ModEntities {
         EntityList.addMapping(GlowSquidEntity.class,"glowsquidEntity", GlowSquidEntityID,0x164f4e, 0x4ddaba);
         EntityList.addMapping(LavaSquidEntity.class,"lavasquidEntity", LavaSquidEntityID,0xa91313, 0xff7022);
 
-        EntityList.addMapping(HorseEntity.class,"horseEntity", HorseEntityID,0, 0);
+        EntityList.addMapping(HorseEntity.class,"horseEntity", HorseEntityID,0xC09E7D, 0xEEE500);
     }
 }
