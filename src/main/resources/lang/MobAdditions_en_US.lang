@@ -11,6 +11,8 @@ item.lavaPasteItem.name=Lava Paste
 
 item.cookedFoxChopItem.name=Cooked Foxchop
 item.rawFoxChopItem.name=Raw Foxchop
+item.sinewExtractingFox.name =Sinew Extracting (Fox)
+
 item.cookedChevalItem.name=Cooked Cheval
 item.rawChevalItem.name=Raw Cheval
 

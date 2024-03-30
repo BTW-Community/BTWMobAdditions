@@ -3,6 +3,7 @@ package com.itlesports.mobadditions.recipe;
 import btw.crafting.recipe.RecipeManager;
 import btw.item.BTWItems;
 import com.itlesports.mobadditions.item.ModItems;
+import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 
 public class CraftingRecipeList {
@@ -20,10 +21,12 @@ public class CraftingRecipeList {
                 new ItemStack(BTWItems.glue)
         });
         RecipeManager.addShapelessRecipe(new ItemStack(ModItems.sinewExtractingFox, 1), new Object[]{
-                new ItemStack(ModItems.rawFoxChop, 2)
+                new ItemStack(ModItems.rawFoxChop),
+                new ItemStack(ModItems.rawFoxChop)
         });
         RecipeManager.addShapelessRecipe(new ItemStack(ModItems.sinewExtractingFox, 1), new Object[]{
-                new ItemStack(ModItems.cookedFoxChop, 2)
+                new ItemStack(ModItems.cookedFoxChop),
+                new ItemStack(ModItems.cookedFoxChop)
         });
     }
     public static void addBlockRecipes() {
