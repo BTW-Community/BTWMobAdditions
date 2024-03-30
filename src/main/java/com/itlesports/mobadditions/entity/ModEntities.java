@@ -32,8 +32,8 @@ public class ModEntities {
         EntityList.addMapping(SpottedWolfEntity.class,"spottedwolfEntity", SpottedWolfEntityID,0,0);
         EntityList.addMapping(StripedWolfEntity.class,"stripedwolfEntity", StripedWolfEntityID,0,0);
         EntityList.addMapping(WoodsWolfEntity.class,"woodswolfEntity", WoodsWolfEntityID,0,0);
-        EntityList.addMapping(FoxEntity.class,"foxEntity", FoxEntityID,0,0);
-        EntityList.addMapping(ArcticFoxEntity.class,"arcticFoxEntity", ArcticFoxEntityID,0,0);
+        EntityList.addMapping(FoxEntity.class,"foxEntity", FoxEntityID,0xD5B69F,0xCC6920);
+        EntityList.addMapping(ArcticFoxEntity.class,"arcticFoxEntity", ArcticFoxEntityID,0xD5B69F,0xCC6920);
 
         EntityList.addMapping(GlowSquidEntity.class,"glowsquidEntity", GlowSquidEntityID,0x164f4e, 0x4ddaba);
         EntityList.addMapping(LavaSquidEntity.class,"lavasquidEntity", LavaSquidEntityID,0xa91313, 0xff7022);
