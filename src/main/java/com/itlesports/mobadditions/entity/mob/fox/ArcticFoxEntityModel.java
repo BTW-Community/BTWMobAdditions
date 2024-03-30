@@ -132,6 +132,18 @@ public class ArcticFoxEntityModel extends ModelBase {
             this.leg3.rotateAngleX = 5.811947F;
             this.leg3.setRotationPoint(0.51F, 17.0F, -4.0F);
         }
+        else if (ArcticFoxEntity.isSleeping()) {
+            this.body.rotateAngleZ = -1.5707964F;
+            this.body.setRotationPoint(0.0F, 21.0F, -6.0F);
+            this.tail.rotateAngleX = -2.6179938F;
+            this.tail.setRotationPoint(-1.0F, 21.0F, 2.0F);
+            this.leg0.setRotationPoint(-2.5F, 21.0F, 0.0F);
+            this.leg1.setRotationPoint(0.5F, 21.0F, 0.0F);
+            if (this.isChild) {
+                this.tail.rotateAngleX = -2.1816616F;
+                this.body.setRotationPoint(0.0F, 21.0F, -2.0F);
+            }
+        }
         else
         {
             this.body.setRotationPoint(0.0F, 16.0F, 0F);

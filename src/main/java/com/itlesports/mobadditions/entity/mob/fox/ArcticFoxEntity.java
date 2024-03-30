@@ -10,6 +10,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
 
 public class ArcticFoxEntity extends WolfEntity {
+    private static boolean SLEEPING_FLAG = false;
     private static final float MOVE_SPEED_AGGRESSIVE = 0.45F;
     private static final float MOVE_SPEED_PASSIVE = 0.3F;
     public ArcticFoxEntity(World world) {
@@ -103,7 +104,11 @@ public class ArcticFoxEntity extends WolfEntity {
     public void onLivingUpdate()
     {
         super.onLivingUpdate();
-
+        int worldTime = (int) (this.worldObj.worldInfo.getWorldTime() % 24000L);
+        if (worldTime > 17500 && worldTime < 23000) //
+        {
+            SLEEPING_FLAG = true;
+        }
     }
     @Override
     protected int getDropItemId()
@@ -160,6 +165,19 @@ public class ArcticFoxEntity extends WolfEntity {
     public EntityAgeable createChild(EntityAgeable par1EntityAgeable)
     {
         return this.spawnBabyAnimal(par1EntityAgeable);
+    }
+    public static boolean isSleeping() {
+        return SLEEPING_FLAG;
+    }
+
+    public void initCreature() {
+        int worldTime = (int)(this.worldObj.worldInfo.getWorldTime() % 24000L);
+
+        if (worldTime > 17500  && worldTime < 23000) //this.getRNG().nextInt(20) == 0  !this.worldObj.isDaytime() this.worldObj.getMoonPhase()
+        {
+            SLEEPING_FLAG = true;
+        }
+        else SLEEPING_FLAG = false;
     }
 }
 

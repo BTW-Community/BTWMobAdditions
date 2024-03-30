@@ -4,12 +4,15 @@ import btw.entity.mob.*;
 import btw.entity.mob.behavior.*;
 import btw.entity.mob.villager.VillagerEntity;
 import btw.item.BTWItems;
+import com.itlesports.mobadditions.entity.mob.fox.ai.EntityAISleep;
+import com.itlesports.mobadditions.entity.mob.rideable.horse.HorseEntity;
 import com.itlesports.mobadditions.item.ModItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.src.*;
 
 public class FoxEntity extends WolfEntity {
+    protected EntityAISleep aiSleep = new EntityAISleep(this);
     private static final float MOVE_SPEED_AGGRESSIVE = 0.45F;
     private static final float MOVE_SPEED_PASSIVE = 0.3F;
     public FoxEntity(World world) {
@@ -30,6 +33,7 @@ public class FoxEntity extends WolfEntity {
         tasks.addTask( 9, new EntityAIBeg( this, 8F ) );
         tasks.addTask( 10, new EntityAIWatchClosest( this, EntityPlayer.class, 8F ) );
         tasks.addTask( 11, new EntityAILookIdle( this ) );
+        tasks.addTask(12, aiSleep );
 
         targetTasks.removeAllTasks();
 
@@ -52,6 +56,9 @@ public class FoxEntity extends WolfEntity {
 
         targetTasks.addTask( 2, new WildWolfTargetIfStarvingBehavior( this,
                 CowEntity.class, 16F, 0, false ) );
+
+        targetTasks.addTask( 2, new WildWolfTargetIfStarvingBehavior( this,
+                HorseEntity.class, 16F, 0, false ) );
     }
     @Override
     @Environment(EnvType.CLIENT)
@@ -103,6 +110,17 @@ public class FoxEntity extends WolfEntity {
     public void onLivingUpdate()
     {
         super.onLivingUpdate();
+        int worldTime = (int) (this.worldObj.worldInfo.getWorldTime() % 24000L);
+        if (worldTime > 17500 && worldTime < 23000) //
+        {
+            aiSleep.setSleeping(false);
+            setSleeping(true);
+        }
+        else
+        {
+            aiSleep.setSleeping(false);
+            setSleeping(false);
+        }
     }
     @Override
     protected int getDropItemId()
@@ -159,5 +177,42 @@ public class FoxEntity extends WolfEntity {
     public EntityAgeable createChild(EntityAgeable par1EntityAgeable)
     {
         return this.spawnBabyAnimal(par1EntityAgeable);
+    }
+
+    public void initCreature() {
+        int worldTime = (int)(this.worldObj.worldInfo.getWorldTime() % 24000L);
+
+        if (worldTime > 17500  && worldTime < 23000) //this.getRNG().nextInt(20) == 0  !this.worldObj.isDaytime() this.worldObj.getMoonPhase()
+        {
+            aiSleep.setSleeping(true);
+            setSleeping(true);
+        }
+            aiSleep.setSleeping(false);
+            setSleeping(false);
+    }
+    public boolean isSleeping()
+    {
+        return (this.dataWatcher.getWatchableObjectByte(16 & 1) != 0);
+    }
+
+    public void setSleeping(boolean par1) {
+        byte var2 = this.dataWatcher.getWatchableObjectByte(16);
+
+        if (par1) {
+            this.dataWatcher.updateObject(16, Byte.valueOf((byte) (var2 | 1)));
+        } else {
+            this.dataWatcher.updateObject(16, Byte.valueOf((byte) (var2 & -2)));
+        }
+    }
+    @Override
+    public void setAngry( boolean bAngry )
+    {
+        super.setAngry( bAngry );
+
+        if ( bAngry )
+        {
+            setSitting(false);
+            setSleeping(false);
+        }
     }
 }

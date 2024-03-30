@@ -6,9 +6,11 @@
 package com.itlesports.mobadditions.entity.mob.fox;
 
 import net.minecraft.src.*;
+import org.jetbrains.annotations.NotNull;
 import org.lwjgl.opengl.GL11;
 
 public class FoxEntityModel extends ModelBase {
+
 	private final ModelRenderer body;
 	private final ModelRenderer head;
 	private final ModelRenderer leg0;
@@ -55,6 +57,7 @@ public class FoxEntityModel extends ModelBase {
 		setRotation(tail, 1.5708F, 0.0F, 0.0F);
 		this.tail.setTextureOffset(30, 0).addBox(-2.0F, 1.0F, -2.25F, 4, 9, 5, 0.0F);
 	}
+
 
 	/**
 	* Sets the models various rotation angles then renders the model.
@@ -114,49 +117,55 @@ public class FoxEntityModel extends ModelBase {
 		modelRenderer.rotateAngleZ = z;
 	}
 	public void setLivingAnimations(EntityLiving par1EntityLiving, float par2, float par3, float par4) {
-		FoxEntity var5 = (FoxEntity)par1EntityLiving;
-		if (var5.isAngry()|| var5.isWildAndHostile() )
-		{
+		FoxEntity var5 = (FoxEntity) par1EntityLiving;
+		if (var5.isAngry() || var5.isWildAndHostile()) {
 			this.tail.rotateAngleY = 0.0F;
-		}
-		else
-		{
+		} else {
 			this.tail.rotateAngleY = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
 		}
-		if (var5.isSitting())
-		{
+		if (var5.isSitting()) {
 			this.body.setRotationPoint(-1.0F, 16F, -3.0F);
-			this.body.rotateAngleX = ((float)Math.PI * 2F / 5F);
+			this.body.rotateAngleX = ((float) Math.PI * 2F / 5F);
 			this.tail.setRotationPoint(-1.0F, 18.0F, 4.0F);
 			this.leg0.setRotationPoint(-2.5F, 20.0F, 2.0F);
-			this.leg0.rotateAngleX = ((float)Math.PI * 3F / 2F);
+			this.leg0.rotateAngleX = ((float) Math.PI * 3F / 2F);
 			this.leg1.setRotationPoint(0.5F, 20.0F, 2.0F);
-			this.leg1.rotateAngleX = ((float)Math.PI * 3F / 2F);
+			this.leg1.rotateAngleX = ((float) Math.PI * 3F / 2F);
 			this.leg2.rotateAngleX = 5.811947F;
 			this.leg2.setRotationPoint(-2.49F, 17.0F, -4.0F);
 			this.leg3.rotateAngleX = 5.811947F;
 			this.leg3.setRotationPoint(0.51F, 17.0F, -4.0F);
 		}
-		else
-		{
-			this.body.setRotationPoint(0.0F, 16.0F, 0F);
-			this.body.rotateAngleX = ((float)Math.PI / 2F);
-			this.tail.setRotationPoint(-1.0F, 16.0F, 7.0F);
-			this.leg0.setRotationPoint(-2.5F, 16.0F, 7.0F);
-			this.leg1.setRotationPoint(0.5F, 16.0F, 7.0F);
-			this.leg2.setRotationPoint(-2.5F, 16.0F, -4.0F);
-			this.leg3.setRotationPoint(0.5F, 16.0F, -4.0F);
-			this.leg0.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
-			this.leg1.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float)Math.PI) * 1.4F * par3;
-			this.leg2.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float)Math.PI) * 1.4F * par3;
-			this.leg3.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
-		}
-		this.head.rotateAngleZ = var5.getInterestedAngle(par4) + var5.getShakeAngle(par4, 0.0F);
-		this.body.rotateAngleZ = var5.getShakeAngle(par4, -0.16F);
-		this.tail.rotateAngleZ = var5.getShakeAngle(par4, -0.2F);
+		else if (var5.isSleeping()) {
+			this.body.rotateAngleZ = -1.5707964F;
+			this.body.setRotationPoint(0.0F, 21.0F, -6.0F);
+			this.tail.rotateAngleX = -2.6179938F;
+			this.tail.setRotationPoint(-1.0F, 21.0F, 2.0F);
+			this.leg0.setRotationPoint(-2.5F, 21.0F, 0.0F);
+			this.leg1.setRotationPoint(0.5F, 21.0F, 0.0F);
+			if (this.isChild) {
+				this.tail.rotateAngleX = -2.1816616F;
+				this.body.setRotationPoint(0.0F, 21.0F, -2.0F);
+			}
+			} else {
+				this.body.setRotationPoint(0.0F, 16.0F, 0F);
+				this.body.rotateAngleX = ((float) Math.PI / 2F);
+				this.tail.setRotationPoint(-1.0F, 16.0F, 7.0F);
+				this.leg0.setRotationPoint(-2.5F, 16.0F, 7.0F);
+				this.leg1.setRotationPoint(0.5F, 16.0F, 7.0F);
+				this.leg2.setRotationPoint(-2.5F, 16.0F, -4.0F);
+				this.leg3.setRotationPoint(0.5F, 16.0F, -4.0F);
+				this.leg0.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
+				this.leg1.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float) Math.PI) * 1.4F * par3;
+				this.leg2.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float) Math.PI) * 1.4F * par3;
+				this.leg3.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
+			}
+			this.head.rotateAngleZ = var5.getInterestedAngle(par4) + var5.getShakeAngle(par4, 0.0F);
+			this.body.rotateAngleZ = var5.getShakeAngle(par4, -0.16F);
+			this.tail.rotateAngleZ = var5.getShakeAngle(par4, -0.2F);
 
-		this.head.rotationPointY = 13.5F + ((FoxEntity)par1EntityLiving).getGrazeHeadVerticalOffset(par4) * 5.0F;
-		headRotation = ((FoxEntity)par1EntityLiving).getGrazeHeadRotation(par4);
-		this.head.rotateAngleZ += var5.getPossessionHeadRotation();
+			this.head.rotationPointY = 13.5F + ((FoxEntity) par1EntityLiving).getGrazeHeadVerticalOffset(par4) * 5.0F;
+			headRotation = ((FoxEntity) par1EntityLiving).getGrazeHeadRotation(par4);
+			this.head.rotateAngleZ += var5.getPossessionHeadRotation();
+		}
 	}
-}
