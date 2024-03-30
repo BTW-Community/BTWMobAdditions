@@ -51,26 +51,6 @@ public class GlowSquidEntity extends SquidEntity {
     @Override
     protected void dropFewItems(boolean var1, int var2)
     {
-        //Ink Sacks
-        /**
-         int var3 = this.rand.nextInt(3 + var2) + 1;
-
-         for (int var4 = 0; var4 < var3; ++var4)
-         {
-         this.entityDropItem(new ItemStack(Item.dyePowder, 1, 0), 0.0F);
-         }
-         */
-
-        //Shards
-        /**
-         var3 = this.rand.nextInt(3 + var2) + 1;
-
-         for (int var4 = 0; var4 < var3; ++var4)
-         {
-         this.entityDropItem(new ItemStack(DecoDefs.PrismarineShard, 1, 0), 0.0F);
-         }
-         */
-
         //Glands
         if (this.rand.nextInt(8) - var2 <= 0)
         {

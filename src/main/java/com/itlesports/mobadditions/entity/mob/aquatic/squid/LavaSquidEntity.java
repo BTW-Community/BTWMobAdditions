@@ -14,10 +14,6 @@ public class LavaSquidEntity extends EntityLavaSquid {
         this.texture = "/mobadditions/entity/mob/aquatic/lavasquid.png";
         this.isImmuneToFire = true;
     }
-    public boolean isBurning()
-    {
-        return false;
-    }
 public void onLivingUpdate() {
         super.onLivingUpdate();
         addClientLight();
@@ -25,30 +21,14 @@ public void onLivingUpdate() {
         this.worldObj.updateLightByType(EnumSkyBlock.Block,
                 (int) this.posX, (int) this.posY, (int) this.posZ);
     }
+    if (this.isInLava()) {
+        this.worldObj.spawnParticle("largesmoke", this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width, this.posY + this.rand.nextDouble() * (double)this.height, this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width, 0.0D, 0.0D, 0.0D);
+        this.worldObj.spawnParticle( "flame", this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width, this.posY + this.rand.nextDouble() * (double)this.height, this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width, 0.0D, 0.0D, 0.0D);
+    }
 }
     @Override
     protected void dropFewItems(boolean var1, int var2)
     {
-        //Ink Sacks
-        /**
-         int var3 = this.rand.nextInt(3 + var2) + 1;
-
-         for (int var4 = 0; var4 < var3; ++var4)
-         {
-         this.entityDropItem(new ItemStack(Item.dyePowder, 1, 0), 0.0F);
-         }
-         */
-
-        //Shards
-        /**
-         var3 = this.rand.nextInt(3 + var2) + 1;
-
-         for (int var4 = 0; var4 < var3; ++var4)
-         {
-         this.entityDropItem(new ItemStack(DecoDefs.PrismarineShard, 1, 0), 0.0F);
-         }
-         */
-
         //Glands
         if (this.rand.nextInt(8) - var2 <= 0)
         {
@@ -62,6 +42,7 @@ public void onLivingUpdate() {
 
             for (int var6 = 0; var6 < var3; ++var6)
             {
+                this.worldObj.spawnParticle("largesmoke", this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width, this.posY + this.rand.nextDouble() * (double)this.height, this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width, 0.0D, 0.0D, 0.0D);
                 this.entityDropItem(new ItemStack(ModItems.lavaInkSac, 1, 0), 0.0F);
             }
         }

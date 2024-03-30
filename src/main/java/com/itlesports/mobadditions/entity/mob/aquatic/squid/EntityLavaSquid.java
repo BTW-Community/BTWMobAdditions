@@ -105,12 +105,6 @@ public class EntityLavaSquid extends EntityLavaMob
     }
 
     @Override
-    protected String getLivingSound()
-    {
-        return null;
-    }
-
-    @Override
     protected String getHurtSound()
     {
         return null;
@@ -125,12 +119,6 @@ public class EntityLavaSquid extends EntityLavaMob
     protected float getSoundVolume()
     {
         return 0.4F;
-    }
-
-    @Override
-    protected int getDropItemId()
-    {
-        return 0;
     }
 
     @Override

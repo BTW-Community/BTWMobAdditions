@@ -49,7 +49,7 @@ public class EntityLavaSquidRenderer extends RenderLiving
     @Override
     public void doRender(Entity entity, double par2, double par4, double par6, float par8, float par9)
     {
-        super.doRenderLiving( (EntityLiving)entity, par2, par4, par6, par8, par9);;
+        super.doRenderLiving( (EntityLiving)entity, par2, par4, par6, par8, par9);
 
         renderTentacleAttack((EntityLavaSquid)entity, par2, par4, par6, par8, par9);
     }
@@ -92,32 +92,6 @@ public class EntityLavaSquidRenderer extends RenderLiving
             double dFlatTentacleLength = MathHelper.sqrt_double( dDeltaX * dDeltaX + dDeltaZ * dDeltaZ );
 
             Tessellator tesslator = Tessellator.instance;
-
-            // line test for debugging
-            /*
-            {
-	            GL11.glDisable(GL11.GL_TEXTURE_2D);
-	            GL11.glDisable(GL11.GL_LIGHTING);
-	            tesslator.startDrawing(3);
-				if ( iAttackProgressCounter <= ( squid.m_iTentacleAttackDuration >> 1 ) )
-				{
-		            tesslator.setColorOpaque_I( 0xFF0000 );
-				}
-				else
-				{
-		            tesslator.setColorOpaque_I(0);
-				}
-
-	            tesslator.addVertex( dLocalSourcePosX, dLocalSourcePosY, dLocalSourcePosZ );
-	            tesslator.addVertex( dLocalTipPosX, dLocalTipPosY, dLocalTipPosZ );
-
-	            tesslator.draw();
-	            GL11.glEnable(GL11.GL_LIGHTING);
-	            GL11.glEnable(GL11.GL_TEXTURE_2D);
-            }
-            */
-
-            // model render
 
             GL11.glPushMatrix();
 
