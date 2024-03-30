@@ -187,8 +187,8 @@ public class FoxEntity extends WolfEntity {
             aiSleep.setSleeping(true);
             setSleeping(true);
         }
-            aiSleep.setSleeping(false);
-            setSleeping(false);
+        aiSleep.setSleeping(false);
+        setSleeping(false);
     }
     public boolean isSleeping()
     {

@@ -60,8 +60,8 @@ public class FoxEntityModel extends ModelBase {
 
 
 	/**
-	* Sets the models various rotation angles then renders the model.
-	*/
+	 * Sets the models various rotation angles then renders the model.
+	 */
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
 		this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
@@ -96,22 +96,22 @@ public class FoxEntityModel extends ModelBase {
 	}
 
 	/**
-	* Sets the model's various rotation angles. For bipeds, f and f1 are used for animating the movement of arms
-	* and legs, where f represents the time(so that arms and legs swing back and forth) and f1 represents how
-	* "far" arms and legs can swing at most.
-	*/
+	 * Sets the model's various rotation angles. For bipeds, f and f1 are used for animating the movement of arms
+	 * and legs, where f represents the time(so that arms and legs swing back and forth) and f1 represents how
+	 * "far" arms and legs can swing at most.
+	 */
 	@Override
-    public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6, Entity par7Entity) {
+	public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6, Entity par7Entity) {
 		this.head.rotateAngleX = par5 / (180F / (float)Math.PI);
 		this.head.rotateAngleY = par4 / (180F / (float)Math.PI);
 		this.tail.rotateAngleX = par3;
 		head.rotateAngleX = headRotation;
-    }
-	
+	}
+
 	/**
-	*	Sets the rotation of a ModelRenderer. Only called if the ModelRenderer has a rotation
-	*/
-    public void setRotation(ModelRenderer modelRenderer, float x, float y, float z) {
+	 *	Sets the rotation of a ModelRenderer. Only called if the ModelRenderer has a rotation
+	 */
+	public void setRotation(ModelRenderer modelRenderer, float x, float y, float z) {
 		modelRenderer.rotateAngleX = x;
 		modelRenderer.rotateAngleY = y;
 		modelRenderer.rotateAngleZ = z;
@@ -147,25 +147,25 @@ public class FoxEntityModel extends ModelBase {
 				this.tail.rotateAngleX = -2.1816616F;
 				this.body.setRotationPoint(0.0F, 21.0F, -2.0F);
 			}
-			} else {
-				this.body.setRotationPoint(0.0F, 16.0F, 0F);
-				this.body.rotateAngleX = ((float) Math.PI / 2F);
-				this.tail.setRotationPoint(-1.0F, 16.0F, 7.0F);
-				this.leg0.setRotationPoint(-2.5F, 16.0F, 7.0F);
-				this.leg1.setRotationPoint(0.5F, 16.0F, 7.0F);
-				this.leg2.setRotationPoint(-2.5F, 16.0F, -4.0F);
-				this.leg3.setRotationPoint(0.5F, 16.0F, -4.0F);
-				this.leg0.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
-				this.leg1.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float) Math.PI) * 1.4F * par3;
-				this.leg2.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float) Math.PI) * 1.4F * par3;
-				this.leg3.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
-			}
-			this.head.rotateAngleZ = var5.getInterestedAngle(par4) + var5.getShakeAngle(par4, 0.0F);
-			this.body.rotateAngleZ = var5.getShakeAngle(par4, -0.16F);
-			this.tail.rotateAngleZ = var5.getShakeAngle(par4, -0.2F);
-
-			this.head.rotationPointY = 13.5F + ((FoxEntity) par1EntityLiving).getGrazeHeadVerticalOffset(par4) * 5.0F;
-			headRotation = ((FoxEntity) par1EntityLiving).getGrazeHeadRotation(par4);
-			this.head.rotateAngleZ += var5.getPossessionHeadRotation();
+		} else {
+			this.body.setRotationPoint(0.0F, 16.0F, 0F);
+			this.body.rotateAngleX = ((float) Math.PI / 2F);
+			this.tail.setRotationPoint(-1.0F, 16.0F, 7.0F);
+			this.leg0.setRotationPoint(-2.5F, 16.0F, 7.0F);
+			this.leg1.setRotationPoint(0.5F, 16.0F, 7.0F);
+			this.leg2.setRotationPoint(-2.5F, 16.0F, -4.0F);
+			this.leg3.setRotationPoint(0.5F, 16.0F, -4.0F);
+			this.leg0.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
+			this.leg1.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float) Math.PI) * 1.4F * par3;
+			this.leg2.rotateAngleX = MathHelper.cos(par2 * 0.6662F + (float) Math.PI) * 1.4F * par3;
+			this.leg3.rotateAngleX = MathHelper.cos(par2 * 0.6662F) * 1.4F * par3;
 		}
+		this.head.rotateAngleZ = var5.getInterestedAngle(par4) + var5.getShakeAngle(par4, 0.0F);
+		this.body.rotateAngleZ = var5.getShakeAngle(par4, -0.16F);
+		this.tail.rotateAngleZ = var5.getShakeAngle(par4, -0.2F);
+
+		this.head.rotationPointY = 13.5F + ((FoxEntity) par1EntityLiving).getGrazeHeadVerticalOffset(par4) * 5.0F;
+		headRotation = ((FoxEntity) par1EntityLiving).getGrazeHeadRotation(par4);
+		this.head.rotateAngleZ += var5.getPossessionHeadRotation();
 	}
+}

@@ -10,7 +10,7 @@ public class EntityAISleep extends EntityAIBase
     private EntityTameable theEntity;
     private FoxEntity foxEntity;
 
-    /** If the EntityTameable is sitting. */
+    /** If the EntityTameable is sleeping. */
     private boolean isSleeping = false;
 
     public EntityAISleep(EntityTameable par1EntityTameable)
