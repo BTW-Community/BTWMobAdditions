@@ -6,6 +6,9 @@ item.lavaInkSacItem.name=Lava Ink Sac
 item.glowPowderItem.name=Glow Powder
 item.lavaPowderItem.name=Lava Powder
 
+item.glowPasteItem.name=Glow Paste
+item.lavaPasteItem.name=Lava Paste
+
 item.cookedFoxChopItem.name=Cooked Foxchop
 item.rawFoxChopItem.name=Raw Foxchop
 item.cookedChevalItem.name=Cooked Cheval
