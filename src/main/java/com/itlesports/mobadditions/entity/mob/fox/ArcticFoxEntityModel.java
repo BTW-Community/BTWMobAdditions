@@ -1,6 +1,7 @@
 package com.itlesports.mobadditions.entity.mob.fox;
 
 import net.minecraft.src.*;
+import org.lwjgl.opengl.GL11;
 
 public class ArcticFoxEntityModel extends ModelBase {
     private final ModelRenderer body;
@@ -56,13 +57,34 @@ public class ArcticFoxEntityModel extends ModelBase {
     @Override
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-        body.render(f5);
-        head.render(f5);
-        leg0.render(f5);
-        leg1.render(f5);
-        leg2.render(f5);
-        leg3.render(f5);
-        tail.render(f5);
+        if (this.isChild)
+        {
+            float var8 = 2.0F;
+            GL11.glPushMatrix();
+            GL11.glTranslatef(0.0F, 5.0F * f5, 2.0F * f5);
+            this.head.renderWithRotation(f5);
+            GL11.glPopMatrix();
+            GL11.glPushMatrix();
+            GL11.glScalef(1.0F / var8, 1.0F / var8, 1.0F / var8);
+            GL11.glTranslatef(0.0F, 24.0F * f5, 0.0F);
+            this.body.render(f5);
+            this.leg0.render(f5);
+            this.leg1.render(f5);
+            this.leg2.render(f5);
+            this.leg3.render(f5);
+            this.tail.renderWithRotation(f5);
+            GL11.glPopMatrix();
+        }
+        else
+        {
+            body.render(f5);
+            head.render(f5);
+            leg0.render(f5);
+            leg1.render(f5);
+            leg2.render(f5);
+            leg3.render(f5);
+            tail.render(f5);
+        }
     }
 
     /**

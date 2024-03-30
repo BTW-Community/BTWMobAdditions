@@ -103,8 +103,6 @@ public class FoxEntity extends WolfEntity {
     public void onLivingUpdate()
     {
         super.onLivingUpdate();
-
-    return;
     }
     @Override
     protected int getDropItemId()
@@ -129,5 +127,37 @@ public class FoxEntity extends WolfEntity {
         }
 
         return -1;
+    }
+    @Override
+    public boolean canMateWith(EntityAnimal par1EntityAnimal)
+    {
+        if (par1EntityAnimal == this)
+        {
+            return false;
+        }
+        else if (!this.isTamed())
+        {
+            return false;
+        }
+        else if (!(par1EntityAnimal instanceof FoxEntity))
+        {
+            return false;
+        }
+        else
+        {
+            FoxEntity var2 = (FoxEntity)par1EntityAnimal;
+            return !var2.isTamed() ? false : (var2.isSitting() ? false : this.isInLove() && var2.isInLove());
+        }
+    }
+    @Override
+    public FoxEntity spawnBabyAnimal(EntityAgeable parent)
+    {
+        FoxEntity var2 = (FoxEntity) EntityList.createEntityOfType(FoxEntity.class, this.worldObj);
+        return var2;
+    }
+    @Override
+    public EntityAgeable createChild(EntityAgeable par1EntityAgeable)
+    {
+        return this.spawnBabyAnimal(par1EntityAgeable);
     }
 }

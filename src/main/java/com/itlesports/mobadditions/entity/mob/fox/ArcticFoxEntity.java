@@ -130,5 +130,37 @@ public class ArcticFoxEntity extends WolfEntity {
 
         return -1;
     }
+    @Override
+    public boolean canMateWith(EntityAnimal par1EntityAnimal)
+    {
+        if (par1EntityAnimal == this)
+        {
+            return false;
+        }
+        else if (!this.isTamed())
+        {
+            return false;
+        }
+        else if (!(par1EntityAnimal instanceof ArcticFoxEntity))
+        {
+            return false;
+        }
+        else
+        {
+            ArcticFoxEntity var2 = (ArcticFoxEntity)par1EntityAnimal;
+            return !var2.isTamed() ? false : (var2.isSitting() ? false : this.isInLove() && var2.isInLove());
+        }
+    }
+    @Override
+    public ArcticFoxEntity spawnBabyAnimal(EntityAgeable parent)
+    {
+        ArcticFoxEntity var2 = (ArcticFoxEntity) EntityList.createEntityOfType(ArcticFoxEntity.class, this.worldObj);
+        return var2;
+    }
+    @Override
+    public EntityAgeable createChild(EntityAgeable par1EntityAgeable)
+    {
+        return this.spawnBabyAnimal(par1EntityAgeable);
+    }
 }
 
