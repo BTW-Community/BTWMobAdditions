@@ -2,6 +2,8 @@ package com.itlesports.mobadditions.entity.mob.rideable.horse;
 
 import com.google.common.collect.Maps;
 import java.util.Map;
+
+import com.itlesports.mobadditions.entity.mob.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import net.minecraft.src.*;
 public class HorseRenderer extends RenderLiving

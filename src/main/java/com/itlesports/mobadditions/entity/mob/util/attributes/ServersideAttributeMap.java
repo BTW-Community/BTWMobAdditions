@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.entity.mob.attributes;
+package com.itlesports.mobadditions.entity.mob.util.attributes;
 import com.google.common.collect.Sets;
 import java.util.Collection;
 import java.util.HashSet;

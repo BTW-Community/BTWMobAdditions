@@ -1,5 +1,5 @@
 package com.itlesports.mobadditions.entity.mob.rideable.horse;
-import com.itlesports.mobadditions.entity.EntityLivingData;
+import com.itlesports.mobadditions.entity.mob.util.EntityLivingData;
 
 public class HorseEntityGroupData extends EntityLivingData {
     public int field_111107_a;

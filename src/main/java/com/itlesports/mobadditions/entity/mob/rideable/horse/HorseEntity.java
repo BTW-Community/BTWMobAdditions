@@ -2,9 +2,15 @@ package com.itlesports.mobadditions.entity.mob.rideable.horse;
 
 import btw.entity.mob.SquidEntity;
 import btw.entity.mob.behavior.*;
-import com.itlesports.mobadditions.entity.EntityLivingBase;
-import com.itlesports.mobadditions.entity.EntityLivingData;
+import com.itlesports.mobadditions.entity.mob.util.AnimalChest;
+import com.itlesports.mobadditions.entity.mob.util.EntityLivingBase;
+import com.itlesports.mobadditions.entity.mob.util.EntityLivingData;
 import com.itlesports.mobadditions.entity.mob.attributes.*;
+import com.itlesports.mobadditions.entity.mob.util.KickingAnimal;
+import com.itlesports.mobadditions.entity.mob.util.attributes.Attribute;
+import com.itlesports.mobadditions.entity.mob.util.attributes.AttributeInstance;
+import com.itlesports.mobadditions.entity.mob.util.attributes.RangedAttribute;
+import com.itlesports.mobadditions.entity.mob.util.attributes.SharedMonsterAttributes;
 import com.itlesports.mobadditions.item.ModItems;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

@@ -1,5 +1,5 @@
-package com.itlesports.mobadditions.entity.mob.attributes;
-import net.minecraft.src.*;
+package com.itlesports.mobadditions.entity.mob.util.attributes;
+
 public class RangedAttribute extends BaseAttribute
 {
     private final double minimumValue;
