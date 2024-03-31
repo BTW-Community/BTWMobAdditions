@@ -25,6 +25,9 @@ item.horseArmorIron.name=Iron Horse Armor
 
 tile.hayBlock.name=Hay Block
 
+tile.foxCompanionCube.name=Companion Cube
+tile.foxCompanionCubeSlab.name=Companion Slab
+
 # Mobs
 
 entity.ashenwolfEntity.name=Ashen Wolf
