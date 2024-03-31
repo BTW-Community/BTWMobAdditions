@@ -25,8 +25,8 @@ item.horseArmorIron.name=Iron Horse Armor
 
 tile.hayBlock.name=Hay Block
 
-tile.foxCompanionCube.name=Companion Cube
-tile.foxCompanionCubeSlab.name=Companion Slab
+tile.foxCompanionCube.cube.name=Companion Cube
+tile.foxCompanionCube.slab.name=Companion Slab
 
 # Mobs
 

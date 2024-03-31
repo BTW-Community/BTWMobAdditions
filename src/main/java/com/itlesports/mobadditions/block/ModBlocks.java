@@ -8,8 +8,10 @@ import net.minecraft.src.CreativeTabs;
 public class ModBlocks{
     public static Block hayBlock;
     public static Block foxCompanionCube;
+    public static int HayBlockID = 2000;
+    public static int FoxCompanionCubeID = 2001;
     public static void registerModBlocks() {
-        hayBlock = new HayBlock(2000).setUnlocalizedName("hayBlock").setCreativeTab(CreativeTabs.tabBlock);
-        foxCompanionCube = new FoxCompanionCubeBlock(2001).setUnlocalizedName("foxCompanionCube").setCreativeTab(CreativeTabs.tabBlock);
+        hayBlock = new HayBlock(HayBlockID).setUnlocalizedName("hayBlock").setCreativeTab(CreativeTabs.tabBlock);
+        foxCompanionCube = new FoxCompanionCubeBlock(FoxCompanionCubeID).setUnlocalizedName("foxCompanionCube").setCreativeTab(CreativeTabs.tabBlock);
     }
 }

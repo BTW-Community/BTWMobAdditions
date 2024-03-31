@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class GlowLighting extends Block {
 
-    public final static int lightSourceTickRate = 20;
+    public final static int lightSourceTickRate = 10;
 
     public GlowLighting(int par1) {
         super(par1, Material.air);

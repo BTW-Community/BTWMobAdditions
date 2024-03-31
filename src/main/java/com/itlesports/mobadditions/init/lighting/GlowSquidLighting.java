@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class GlowSquidLighting extends Block{
 
-    public final static int lightSourceTickRate = 20;
+    public final static int lightSourceTickRate = 10;
 
     public GlowSquidLighting(int par1) {
         super(par1, Material.air);

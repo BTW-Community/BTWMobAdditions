@@ -31,9 +31,6 @@ public class FoxCompanionCubeBlock extends Block
 
         setStepSound( Block.soundClothFootstep );
 
-        setUnlocalizedName( "foxCompanionCube" );
-
-        setCreativeTab( CreativeTabs.tabBlock );
     }
 
     @Override
