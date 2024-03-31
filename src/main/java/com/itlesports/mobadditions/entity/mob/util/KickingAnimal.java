@@ -3,8 +3,8 @@ package com.itlesports.mobadditions.entity.mob.util;
 import btw.client.network.packet.handler.EntityEventPacketHandler;
 import btw.network.packet.BTWPacketManager;
 import btw.world.util.WorldUtils;
-import com.itlesports.mobadditions.entity.mob.attributes.*;
 import com.itlesports.mobadditions.entity.mob.util.attributes.*;
+import com.itlesports.mobadditions.entity.mob.util.attributes.BaseAttributeMap;
 import net.minecraft.src.*;
 
 import java.io.ByteArrayOutputStream;
