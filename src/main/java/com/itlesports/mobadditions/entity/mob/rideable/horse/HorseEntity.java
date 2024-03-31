@@ -5,7 +5,6 @@ import btw.entity.mob.behavior.*;
 import com.itlesports.mobadditions.entity.mob.util.AnimalChest;
 import com.itlesports.mobadditions.entity.mob.util.EntityLivingBase;
 import com.itlesports.mobadditions.entity.mob.util.EntityLivingData;
-import com.itlesports.mobadditions.entity.mob.attributes.*;
 import com.itlesports.mobadditions.entity.mob.util.KickingAnimal;
 import com.itlesports.mobadditions.entity.mob.util.attributes.Attribute;
 import com.itlesports.mobadditions.entity.mob.util.attributes.AttributeInstance;
