@@ -1,9 +1,10 @@
 package com.itlesports.mobadditions.item.blockitem;
 
-import btw.block.BTWBlocks;
 import btw.block.blocks.CompanionCubeBlock;
 import btw.util.MiscUtils;
 import btw.world.util.BlockPos;
+import com.itlesports.mobadditions.block.ModBlocks;
+import com.itlesports.mobadditions.block.onesix.FoxCompanionCubeBlock;
 import net.minecraft.src.*;
 
 public class FoxCompanionCubeBlockItem extends ItemBlock {
@@ -44,9 +45,9 @@ public class FoxCompanionCubeBlockItem extends ItemBlock {
 
     public boolean canCombineWithBlock(World world, int i, int j, int k, int iItemDamage) {
         int iBlockID = world.getBlockId(i, j, k);
-        if (this.getIsSlab(iItemDamage) && iBlockID == BTWBlocks.companionCube.blockID) {
-            CompanionCubeBlock companionCube = (CompanionCubeBlock)((CompanionCubeBlock) Block.blocksList[iBlockID]);
-            if (companionCube != null && companionCube.getIsSlab(world, i, j, k)) {
+        if (this.getIsSlab(iItemDamage) && iBlockID == ModBlocks.foxCompanionCube.blockID) {
+            FoxCompanionCubeBlock foxCompanionCube = (FoxCompanionCubeBlock)((FoxCompanionCubeBlock) Block.blocksList[iBlockID]);
+            if (foxCompanionCube != null && foxCompanionCube.getIsSlab(world, i, j, k)) {
                 return true;
             }
         }
@@ -56,15 +57,15 @@ public class FoxCompanionCubeBlockItem extends ItemBlock {
 
     public boolean convertToFullBlock(EntityPlayer player, World world, int i, int j, int k) {
         int iBlockID = world.getBlockId(i, j, k);
-        if (iBlockID == BTWBlocks.companionCube.blockID) {
-            CompanionCubeBlock companionCube = (CompanionCubeBlock)((CompanionCubeBlock)Block.blocksList[iBlockID]);
-            if (companionCube != null && companionCube.getIsSlab(world, i, j, k)) {
+        if (iBlockID == ModBlocks.foxCompanionCube.blockID) {
+            FoxCompanionCubeBlock foxCompanionCube = (FoxCompanionCubeBlock)((FoxCompanionCubeBlock)Block.blocksList[iBlockID]);
+            if (foxCompanionCube != null && foxCompanionCube.getIsSlab(world, i, j, k)) {
                 CompanionCubeBlock.spawnHearts(world, i, j, k);
-                world.playSoundEffect((double)((float)i + 0.5F), (double)((float)j + 0.5F), (double)((float)k + 0.5F), companionCube.stepSound.getPlaceSound(), (companionCube.stepSound.getPlaceVolume() + 1.0F) / 2.0F, companionCube.stepSound.getPlacePitch() * 0.8F);
-                int iTargetBlockID = BTWBlocks.companionCube.blockID;
+                world.playSoundEffect((double)((float)i + 0.5F), (double)((float)j + 0.5F), (double)((float)k + 0.5F), foxCompanionCube.stepSound.getPlaceSound(), (foxCompanionCube.stepSound.getPlaceVolume() + 1.0F) / 2.0F, foxCompanionCube.stepSound.getPlacePitch() * 0.8F);
+                int iTargetBlockID = ModBlocks.foxCompanionCube.blockID;
                 int iTargetMetadata = 0;
                 int iFacing = MiscUtils.convertPlacingEntityOrientationToBlockFacingReversed(player);
-                iTargetMetadata = companionCube.setFacing(iTargetMetadata, iFacing);
+                iTargetMetadata = foxCompanionCube.setFacing(iTargetMetadata, iFacing);
                 return world.setBlockAndMetadataWithNotify(i, j, k, iTargetBlockID, iTargetMetadata);
             }
         }
@@ -73,10 +74,10 @@ public class FoxCompanionCubeBlockItem extends ItemBlock {
     }
 
     public boolean isSlabUpsideDown(int iBlockID, int iMetadata) {
-        if (iBlockID == BTWBlocks.companionCube.blockID) {
-            CompanionCubeBlock companionCube = (CompanionCubeBlock)((CompanionCubeBlock)Block.blocksList[iBlockID]);
-            if (companionCube != null) {
-                return companionCube.getIsUpsideDownSlabFromMetadata(iMetadata);
+        if (iBlockID == ModBlocks.foxCompanionCube.blockID) {
+            FoxCompanionCubeBlock foxCompanionCube = (FoxCompanionCubeBlock)((FoxCompanionCubeBlock)Block.blocksList[iBlockID]);
+            if (foxCompanionCube != null) {
+                return foxCompanionCube.getIsUpsideDownSlabFromMetadata(iMetadata);
             }
         }
 

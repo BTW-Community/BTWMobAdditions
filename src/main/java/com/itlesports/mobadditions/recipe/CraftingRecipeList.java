@@ -4,7 +4,6 @@ import btw.crafting.recipe.RecipeManager;
 import btw.item.BTWItems;
 import btw.item.items.ProgressiveCraftingItem;
 import com.itlesports.mobadditions.block.ModBlocks;
-import com.itlesports.mobadditions.block.onesix.CompanionCubeFox;
 import com.itlesports.mobadditions.item.ModItems;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;

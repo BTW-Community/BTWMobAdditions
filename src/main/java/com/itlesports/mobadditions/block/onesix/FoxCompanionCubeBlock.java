@@ -15,11 +15,11 @@ import net.minecraft.src.*;
 
 import java.util.List;
 
-public class CompanionCubeFox extends Block
+public class FoxCompanionCubeBlock extends Block
 {
     public final static int NUM_SUBTYPES = 16;
 
-    public CompanionCubeFox(int iBlockID )
+    public FoxCompanionCubeBlock(int iBlockID )
     {
         super( iBlockID, Material.cloth );
 
