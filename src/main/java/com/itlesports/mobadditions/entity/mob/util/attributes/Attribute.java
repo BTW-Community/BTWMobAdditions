@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.entity.mob.attributes;
+package com.itlesports.mobadditions.entity.mob.util.attributes;
 
 public interface Attribute
 {

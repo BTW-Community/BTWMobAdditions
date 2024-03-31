@@ -1,4 +1,4 @@
-package com.itlesports.mobadditions.entity.mob.rideable.horse;
+package com.itlesports.mobadditions.entity.mob.util;
 
 public class ResourceLocation implements Comparable<ResourceLocation>
 {

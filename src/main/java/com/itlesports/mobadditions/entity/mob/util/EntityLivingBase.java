@@ -1,6 +1,7 @@
-package com.itlesports.mobadditions.entity;
+package com.itlesports.mobadditions.entity.mob.util;
 
 import com.itlesports.mobadditions.entity.mob.attributes.*;
+import com.itlesports.mobadditions.entity.mob.util.attributes.BaseAttributeMap;
 import net.minecraft.src.Entity;
 import net.minecraft.src.NBTTagCompound;
 import net.minecraft.src.World;
