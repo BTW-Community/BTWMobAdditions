@@ -357,8 +357,6 @@ public class CompanionCubeFox extends Block
     private Icon iconFront;
     @Environment(EnvType.CLIENT)
     private Icon iconGuts;
-    @Environment(EnvType.CLIENT)
-    private Icon iconSide;
 
     @Override
     @Environment(EnvType.CLIENT)
@@ -368,7 +366,6 @@ public class CompanionCubeFox extends Block
 
         iconFront = register.registerIcon("BlockCompanionCube_FoxFront");
         iconGuts = register.registerIcon("BlockCompanionCube_FoxGuts");
-        iconSide = register.registerIcon("BlockCompanionCube_Fox");
     }
 
     @Override
