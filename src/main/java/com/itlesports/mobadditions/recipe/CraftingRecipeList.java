@@ -9,6 +9,8 @@ import net.minecraft.src.Block;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 
+import java.nio.charset.StandardCharsets;
+
 public class CraftingRecipeList {
     public static void addRecipes() {
         addItemRecipes();
@@ -80,13 +82,6 @@ public class CraftingRecipeList {
                 "#  ",
                 "#  ",
                 '#', new ItemStack(ModBlocks.foxCompanionCube, 1, 1)
-        });
-        RecipeManager.addRecipe(new ItemStack(ModBlocks.glowInkBlock, 1, 0), new Object[]{
-                "###",
-                "#S#",
-                "###",
-                '#', new ItemStack(ModItems.glowPaste, 1, 0),
-                "S", new ItemStack(Block.stone, 1, 0)
         });
     }
 

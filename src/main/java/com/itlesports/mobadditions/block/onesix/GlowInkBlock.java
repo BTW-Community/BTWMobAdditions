@@ -1,5 +1,9 @@
 package com.itlesports.mobadditions.block.onesix;
+import com.itlesports.mobadditions.item.ModItems;
 import net.minecraft.src.*;
+
+import java.util.Random;
+
 public class GlowInkBlock extends BlockGlowStone
 {
     public GlowInkBlock(int iBlockID )
@@ -15,12 +19,25 @@ public class GlowInkBlock extends BlockGlowStone
 
         setStepSound( soundStoneFootstep );
 
-        setUnlocalizedName( "lightgem" );
+        setUnlocalizedName( "glowInkBlock" );
     }
 
     @Override
     public boolean hasLargeCenterHardPointToFacing(IBlockAccess blockAccess, int i, int j, int k, int iFacing, boolean bIgnoreTransparency )
     {
         return bIgnoreTransparency;
+    }
+    @Override
+    public int idDropped(int par1, Random par2Random, int par3)
+    {
+        return ModItems.glowPaste.itemID;
+    }
+    protected Icon getSideIcon(int Par1) {
+        return this.blockIcon;
+    }
+    @Override
+    public void registerIcons(IconRegister par1IconRegister)
+    {
+        this.blockIcon = par1IconRegister.registerIcon("glowInkBlock");
     }
 }

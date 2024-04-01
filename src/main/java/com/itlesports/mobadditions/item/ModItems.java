@@ -66,7 +66,7 @@ public class ModItems extends BTWItems {
         Item.suppressConflictWarnings = true;
         Item.itemsList[2000] = new HayItemBlock( 2000 - 256);
         Item.itemsList[2001] = new FoxCompanionCubeItemBlock( 2001 - 256);
-        Item.itemsList[2002] = new ItemBlock(2002 - 265);
+        Item.itemsList[2002] = new ItemBlock(2002 - 256);
     }
 
 }
