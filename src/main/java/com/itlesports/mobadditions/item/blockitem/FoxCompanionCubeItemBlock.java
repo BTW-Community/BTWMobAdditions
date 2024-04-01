@@ -7,8 +7,8 @@ import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.block.onesix.FoxCompanionCubeBlock;
 import net.minecraft.src.*;
 
-public class FoxCompanionCubeBlockItem extends ItemBlock {
-    public FoxCompanionCubeBlockItem(int iItemID) {
+public class FoxCompanionCubeItemBlock extends ItemBlock {
+    public FoxCompanionCubeItemBlock(int iItemID) {
         super(iItemID);
         this.setMaxDamage(0);
         this.setHasSubtypes(true);

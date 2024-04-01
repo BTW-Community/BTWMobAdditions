@@ -2,8 +2,8 @@ package com.itlesports.mobadditions.item;
 
 import btw.item.BTWItems;
 import btw.item.items.SinewExtractingItem;
-import com.itlesports.mobadditions.item.blockitem.FoxCompanionCubeBlockItem;
-import com.itlesports.mobadditions.item.blockitem.HayBlockItem;
+import com.itlesports.mobadditions.item.blockitem.FoxCompanionCubeItemBlock;
+import com.itlesports.mobadditions.item.blockitem.HayItemBlock;
 import com.itlesports.mobadditions.item.food.cookedChevalItem;
 import com.itlesports.mobadditions.item.food.cookedFoxChopItem;
 import com.itlesports.mobadditions.item.food.rawChevalItem;
@@ -64,8 +64,9 @@ public class ModItems extends BTWItems {
     }
     public static void registerModBlockItems() {
         Item.suppressConflictWarnings = true;
-        Item.itemsList[2000] = new HayBlockItem( 2000 - 256);
-        Item.itemsList[2001] = new FoxCompanionCubeBlockItem( 2001 - 256);
+        Item.itemsList[2000] = new HayItemBlock( 2000 - 256);
+        Item.itemsList[2001] = new FoxCompanionCubeItemBlock( 2001 - 256);
+        Item.itemsList[2002] = new ItemBlock(2002 - 265);
     }
 
 }

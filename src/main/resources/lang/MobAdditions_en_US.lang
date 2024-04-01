@@ -25,6 +25,8 @@ item.horseArmorIron.name=Iron Horse Armor
 
 tile.hayBlock.name=Hay Block
 
+tile.glowInkBlock.name=GlowInkBlock
+
 tile.foxCompanionCube.cube.name=Companion Cube
 tile.foxCompanionCube.slab.name=Companion Slab
 

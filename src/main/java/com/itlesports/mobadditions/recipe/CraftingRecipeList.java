@@ -5,6 +5,7 @@ import btw.item.BTWItems;
 import btw.item.items.ProgressiveCraftingItem;
 import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.item.ModItems;
+import net.minecraft.src.Block;
 import net.minecraft.src.Item;
 import net.minecraft.src.ItemStack;
 
@@ -75,12 +76,20 @@ public class CraftingRecipeList {
         });
     }
     public static void addBlockRecipes() {
-        RecipeManager.addRecipe(new ItemStack(ModBlocks.foxCompanionCube, 1, 0 ), new Object[] {
+        RecipeManager.addRecipe(new ItemStack(ModBlocks.foxCompanionCube, 1, 0), new Object[]{
                 "#  ",
                 "#  ",
                 '#', new ItemStack(ModBlocks.foxCompanionCube, 1, 1)
         });
+        RecipeManager.addRecipe(new ItemStack(ModBlocks.glowInkBlock, 1, 0), new Object[]{
+                "###",
+                "#S#",
+                "###",
+                '#', new ItemStack(ModItems.glowPaste, 1, 0),
+                "S", new ItemStack(Block.stone, 1, 0)
+        });
     }
+
     public static void addMeatCuringRecipes() {
         RecipeManager.addShapelessRecipe(new ItemStack(BTWItems.curedMeat), new Object[] {
                 new ItemStack( ModItems.rawCheval ), new ItemStack( BTWItems.nitre) });
