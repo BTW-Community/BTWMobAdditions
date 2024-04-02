@@ -1,12 +1,13 @@
 package com.itlesports.mobadditions.block.onesix;
+
 import com.itlesports.mobadditions.item.ModItems;
 import net.minecraft.src.*;
 
 import java.util.Random;
 
-public class GlowInkBlock extends BlockGlowStone
+public class LavaInkBlock extends BlockGlowStone
 {
-    public GlowInkBlock(int iBlockID )
+    public LavaInkBlock(int iBlockID )
     {
         super( iBlockID, Material.rock );
 
@@ -19,7 +20,7 @@ public class GlowInkBlock extends BlockGlowStone
 
         setStepSound( soundStoneFootstep );
 
-        setUnlocalizedName( "glowInkBlock" );
+        setUnlocalizedName( "lavaInkBlock" );
     }
 
     @Override
@@ -30,7 +31,7 @@ public class GlowInkBlock extends BlockGlowStone
     @Override
     public int idDropped(int par1, Random par2Random, int par3)
     {
-        return ModItems.glowPowder.itemID;
+        return ModItems.lavaPowder.itemID;
     }
     protected Icon getSideIcon(int Par1) {
         return this.blockIcon;
@@ -38,6 +39,7 @@ public class GlowInkBlock extends BlockGlowStone
     @Override
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon("glowInkBlock");
+        this.blockIcon = par1IconRegister.registerIcon("lavaInkBlock");
     }
 }
+
