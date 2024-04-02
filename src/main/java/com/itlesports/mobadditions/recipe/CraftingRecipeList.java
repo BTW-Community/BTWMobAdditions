@@ -83,6 +83,22 @@ public class CraftingRecipeList {
                 "#  ",
                 '#', new ItemStack(ModBlocks.foxCompanionCube, 1, 1)
         });
+
+        RecipeManager.addRecipe(new ItemStack(ModBlocks.glowInkBlock, 1 ), new Object[] {
+                "XXX",
+                "XSX",
+                "XXX",
+                'X', ModItems.glowPaste,
+                'S', new ItemStack(Block.stone, 1)
+        });
+
+        RecipeManager.addRecipe(new ItemStack(ModBlocks.lavaInkBlock, 1 ), new Object[] {
+                "XXX",
+                "XSX",
+                "XXX",
+                'X', ModItems.lavaPaste,
+                'S', new ItemStack(Block.stone, 1)
+        });
     }
 
     public static void addMeatCuringRecipes() {
