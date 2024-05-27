@@ -2,6 +2,7 @@ package com.itlesports.mobadditions.mixin;
 
 import com.itlesports.mobadditions.MobAdditions;
 import btw.world.util.BlockPos;
+import com.itlesports.mobadditions.block.ModBlocks;
 import com.itlesports.mobadditions.init.lighting.GlowLighting;
 import com.itlesports.mobadditions.item.ModItems;
 import net.minecraft.src.*;
@@ -60,6 +61,6 @@ public abstract class GlowLightingPlayerMixin {
     public boolean isDynamicLightSource(int itemID)
     {
 //    	Block.blocksList[itemID].lightValue>0 TODO
-        return itemID == ModItems.glowInkSac.itemID;
+        return itemID == ModItems.glowInkSac.itemID || itemID == ModItems.lavaInkSac.itemID || itemID == ModBlocks.glowInkBlock.blockID || itemID == ModBlocks.lavaInkBlock.blockID || itemID == ModItems.glowPaste.itemID || itemID == ModItems.lavaPaste.itemID;
     }
 }

@@ -22,7 +22,7 @@ public class MobAdditions extends BTWAddon {
     private static MobAdditions instance = new MobAdditions();
     private Map<String, String> propertyValues;
     private MobAdditions() {
-        super("Mob Additions", "0.1.5", "MobAdditions");
+        super("Mob Additions", "0.2.0", "MobAdditions");
     }
     @Override
     public void initialize() {
